@@ -1,0 +1,14 @@
+.archive-detail-page {
+    background: #fffffa;
+    min-height: 100vh;
+  }
+  
+  .archive-detail-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .archive-detail-wrapper img {
+    width: 100%;
+    display: block;
+  }

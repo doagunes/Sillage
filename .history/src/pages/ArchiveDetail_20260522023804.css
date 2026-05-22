@@ -1,0 +1,30 @@
+.archive-detail-wrapper {
+    width: 100%;
+    position: relative;
+    margin-top: 60px;
+  
+    display: flex;
+    justify-content: center;
+  }
+  
+  .archive-detail-wrapper img {
+    width: 1280px;
+    display: block;
+  }
+  
+  .back-button-overlay {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+  
+    width: 60px;
+    height: 60px;
+  
+    background: rgba(255, 0, 0, 0.0);
+    border: none;
+    cursor: pointer;
+  
+    z-index: 999;
+
+    background: rgba(255, 0, 0, 0.3);
+  }

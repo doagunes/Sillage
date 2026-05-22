@@ -1,0 +1,76 @@
+.archive-page {
+    background: #fffffa;
+    color: #111;
+  }
+  
+  .archive-intro {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 40px 0 70px;
+  }
+  
+  .archive-intro p {
+    width: 520px;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+  
+  .archive-grid {
+    width: 1280px;
+    margin: 0 auto 120px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+  }
+  
+  .archive-card {
+    display: block;
+    height: 300px;
+    perspective: 1000px;
+    text-decoration: none;
+  }
+  
+  .archive-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .archive-card:hover .archive-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    background: #202020;
+    object-fit: contain;
+    padding: 28px;
+  }
+  
+  @media (max-width: 900px) {
+    .archive-intro,
+    .archive-grid {
+      width: calc(100% - 32px);
+    }
+  
+    .archive-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .archive-card {
+      height: 230px;
+    }
+  }

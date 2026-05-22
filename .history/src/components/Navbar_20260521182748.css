@@ -1,0 +1,43 @@
+.navbar-svg-wrapper {
+  position: relative;
+  width: 100%;
+  background: #fffffa;
+  overflow: hidden;
+}
+
+.navbar-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.navbar-click-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.nav-hotspot {
+  position: absolute;
+  display: block;
+}
+
+.about-hotspot {
+  left: 46%;
+  top: 58%;
+  width: 70px;
+  height: 30px;
+}
+
+.create-hotspot {
+  left: 53%;
+  top: 58%;
+  width: 270px;
+  height: 30px;
+}
+
+.archive-hotspot {
+  left: 72%;
+  top: 58%;
+  width: 180px;
+  height: 30px;
+}

@@ -1,0 +1,439 @@
+.create-page {
+    background: #fffffa;
+    color: #111;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .create-hero {
+    width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #111;
+    border-bottom: none;
+    margin-top: 34px;
+  }
+  
+  .create-hero-left {
+    height: 337px;
+    padding: 38px 25px;
+  }
+  
+  .create-hero-left h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin: 0 0 110px;
+  }
+  
+  .create-hero-left p {
+    font-size: 34px;
+    font-weight: 300;
+  }
+  
+  .create-hero-image {
+    height: 337px;
+    border-left: 1px solid #111;
+  }
+  
+  .steps-grid {
+    width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid #111;
+  }
+  
+  .step-card {
+    min-height: 270px;
+    border-right: 1px solid #111;
+    padding: 0 22px 30px;
+  }
+  
+  .step-card:last-child {
+    border-right: none;
+  }
+  
+  .step-number {
+    width: 70px;
+    height: 86px;
+    border-right: 1px solid #111;
+    border-bottom: 1px solid #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -22px;
+    margin-bottom: 28px;
+  }
+  
+  .step-card p {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.05;
+  }
+  
+  .create-main {
+    width: 1280px;
+    margin: 75px auto 0;
+    display: grid;
+    grid-template-columns: 1.55fr 0.95fr;
+    gap: 80px;
+  }
+  
+  .memory-panel {
+    border: 1px solid #111;
+    padding: 45px 24px;
+    height: 1220px;
+  }
+  
+  .memory-panel h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  
+  .memory-panel > p {
+    font-size: 16px;
+    color: #777;
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 34px;
+  }
+  
+  .memory-input {
+    height: 730px;
+    background: #202020;
+    color: #bdbdbd;
+    padding: 48px 32px 32px;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .memory-input textarea {
+    width: 100%;
+    height: 470px;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    color: #fffffa;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.35;
+  }
+  
+  .memory-input textarea::placeholder {
+    color: #8f8f8f;
+  }
+  
+  .memory-input span {
+    color: #bdbdbd;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+  
+  .memory-panel button {
+    display: block;
+    width: 470px;
+    height: 68px;
+    margin: 105px auto 0;
+    background: transparent;
+    border: 1px solid #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .notes-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .note-box {
+    height: 125px;
+    background: #202020;
+    color: #fffffa;
+    padding: 16px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    overflow-y: auto;
+  }
+  
+  .note-heart {
+    height: 190px;
+  }
+  
+  .note-base {
+    height: 290px;
+  }
+  
+  .note-box h3 {
+    margin: 0 0 16px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .note-box p {
+    color: #fffffa;
+    font-size: 18px;
+    margin: 6px 0;
+    line-height: 1.25;
+  }
+  
+  .note-box::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .note-box::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .note-box::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+    border-radius: 20px;
+  }
+  
+  .options-box {
+    border: 1px solid #111;
+    min-height: 650px;
+    padding: 35px 32px;
+    margin-top: 70px;
+  }
+  
+  .options-box h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 38px;
+  }
+  
+  .options-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+  
+  .options-box input,
+  .choice-card input {
+    appearance: auto;
+    margin-right: 6px;
+  }
+  
+  .options-box button {
+    width: 100%;
+    height: 65px;
+    margin-top: 115px;
+    background: transparent;
+    border: 1px solid #111;
+    text-align: left;
+    padding-left: 16px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .archive-save {
+    width: 735px;
+    margin: 75px 0 0 calc((100% - 1280px) / 2);
+  }
+  
+  .archive-save button {
+    width: 100%;
+    height: 72px;
+    background: transparent;
+    border: 1px solid #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    cursor: pointer;
+  }
+  
+  .tag-section {
+    width: 1280px;
+    height: 440px;
+    margin: 30px auto 0;
+    position: relative;
+  }
+  
+  .tag {
+    position: absolute;
+    left: 410px;
+    top: 70px;
+    width: 260px;
+    height: 135px;
+    transform: rotate(-16deg);
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .tag-photo {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 510px;
+    height: 320px;
+  }
+  
+  .customize-section {
+    width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .customize-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 45px;
+    font-weight: 300;
+    margin-bottom: 46px;
+  }
+  
+  .customize-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 35px;
+  }
+  
+  .package-preview {
+    height: 745px;
+  }
+  
+  .upload-area h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+  
+  .upload-box {
+    height: 300px;
+    border: 1px dashed #bfc6c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #6d6d6d;
+    margin-bottom: 205px;
+  }
+  
+  .upload-icon {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+  
+  .upload-box p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .upload-box button {
+    width: 50px;
+    height: 50px;
+    background: #202020;
+    color: #fffffa;
+    border: none;
+    font-size: 28px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+  .upload-description {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+  
+  .packaging-choice {
+    width: 1140px;
+    margin: 170px 0 120px calc((100% - 1280px) / 2);
+    display: grid;
+    grid-template-columns: 330px 330px 380px;
+    align-items: end;
+  }
+  
+  .choice-card {
+    border: 1px solid #111;
+    height: 410px;
+    padding: 20px;
+  }
+  
+  .choice-card label {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+  }
+  
+  .choice-image {
+    height: 315px;
+    margin-top: 18px;
+  }
+  
+  .packaging-choice button {
+    height: 62px;
+    background: transparent;
+    border: 1px solid #111;
+    text-align: left;
+    padding-left: 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    margin-left: 32px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 900px) {
+    .create-hero,
+    .steps-grid,
+    .create-main,
+    .tag-section,
+    .customize-section {
+      width: calc(100% - 32px);
+    }
+  
+    .create-hero,
+    .create-main,
+    .customize-grid,
+    .packaging-choice {
+      grid-template-columns: 1fr;
+    }
+  
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .archive-save {
+      width: calc(100% - 32px);
+      margin-left: 16px;
+    }
+  
+    .packaging-choice {
+      width: calc(100% - 32px);
+      margin-left: 16px;
+    }
+  }
+  .memory-title-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #bdbdbd;
+    color: #bdbdbd;
+    font-size: 18px;
+    outline: none;
+    width: 360px;
+    padding: 8px 0;
+  }
+  
+  .disabled-save {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }

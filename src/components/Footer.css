@@ -1,0 +1,38 @@
+.footer {
+    height: 194px;
+    background: #202020;
+    color: #fffffa;
+    display: grid;
+    grid-template-columns: 1.4fr 0.7fr 1.1fr 1fr 1.5fr;
+    align-items: start;
+    padding: 32px 95px 0;
+    border-top: 1px solid #111;
+  }
+  
+  .footer-brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 96px;
+    font-weight: 300;
+    letter-spacing: -8px;
+    line-height: 0.9;
+  }
+  
+  .footer-col h3 {
+    margin: 0 0 18px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 300;
+  }
+  
+  .footer-col p {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #d8d8d8;
+  }
+  
+  .contact p {
+    font-size: 18px;
+  }
+
+  

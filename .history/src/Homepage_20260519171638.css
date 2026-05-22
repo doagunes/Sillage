@@ -1,0 +1,544 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fffffa;
+}
+
+.homepage {
+  width: 100%;
+  min-height: 100vh;
+  background: #fffffa;
+  color: #111;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  height: 144px;
+  border-bottom: 1px solid #111;
+  display: flex;
+  align-items: center;
+  padding: 0 90px;
+  background: #fffffa;
+}
+
+.logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 76px;
+  font-weight: 300;
+  letter-spacing: -7px;
+  line-height: 1;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.nav-links a {
+  color: #111;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  margin-left: 65px;
+  font-size: 27px;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 46% 54%;
+  min-height: 830px;
+  border-bottom: 1px solid #111;
+}
+
+.hero-image {
+  height: 690px;
+  margin-top: 52px;
+}
+
+.polaroid {
+  position: absolute;
+  top: 70px;
+  left: 420px;
+  width: 230px;
+  height: 280px;
+  transform: rotate(-14deg);
+  background: #f3f0ea;
+  border: 12px solid #f8f6f1;
+  z-index: 2;
+}
+
+.hero-content {
+  padding: 75px 90px 0 35px;
+}
+
+.hero-content h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 45px;
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: 0.8px;
+  max-width: 690px;
+  margin: 0 0 480px;
+}
+
+.hero-content p {
+  max-width: 580px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.hero-content button {
+  width: 454px;
+  height: 68px;
+  background: transparent;
+  border: 1px solid #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logo-strip {
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.popular {
+  padding: 80px 110px 130px;
+  border-bottom: 1px solid #111;
+}
+
+.popular h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.product-card {
+  border: 1px solid #111;
+  padding: 20px;
+  min-height: 476px;
+}
+
+.product-image {
+  height: 360px;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.product-card button {
+  width: 100%;
+  height: 41px;
+  background: transparent;
+  border: 1px solid #111;
+  font-family: Georgia, "Times New Roman", serif;
+  cursor: pointer;
+}
+
+.statement {
+  position: relative;
+  height: 590px;
+  border-bottom: 1px solid #111;
+}
+
+.statement-image {
+  position: absolute;
+  inset: 0;
+}
+
+.statement h2 {
+  position: absolute;
+  right: 90px;
+  top: 70px;
+  width: 445px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 47px;
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+.why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 1100px;
+  border-bottom: 1px solid #111;
+}
+
+.why-left {
+  border-right: 1px solid #111;
+  position: relative;
+}
+
+.why-left h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 75px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 220px;
+}
+
+.why-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+}
+
+.why-right {
+  background: #212121;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 95px;
+}
+
+.why-right p {
+  width: 460px;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.package {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 930px;
+}
+
+.package-text {
+  padding: 90px 100px;
+}
+
+.package-text h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 49px;
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 390px;
+}
+
+.package-text p {
+  max-width: 530px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.package-image {
+  height: 700px;
+  margin-top: 35px;
+}
+
+.placeholder {
+  background: #e4e0da;
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    height: auto;
+    padding: 30px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-icons {
+    margin-left: 0;
+  }
+
+  .hero,
+  .why,
+  .package {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 80px;
+    font-size: 38px;
+  }
+
+  .hero-content button {
+    width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-strip {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 30px;
+    padding: 50px;
+  }
+}
+.footer {
+    height: 194px;
+    background: #202020;
+    color: #fffffa;
+    display: grid;
+    grid-template-columns: 1.4fr 0.7fr 1.1fr 1fr 1.5fr;
+    align-items: start;
+    padding: 32px 95px 0;
+    border-top: 1px solid #111;
+  }
+  
+  .footer-brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 96px;
+    font-weight: 300;
+    letter-spacing: -8px;
+    line-height: 0.9;
+  }
+  
+  .footer-col h3 {
+    margin: 0 0 18px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 300;
+  }
+  
+  .footer-col p {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #d8d8d8;
+  }
+  
+  .contact p {
+    font-size: 18px;
+  }
+  
+  .about-page {
+    background: #fffffa;
+    color: #111;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .about-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 100px 90px;
+    gap: 90px;
+  }
+  
+  .about-text h1,
+  .key-points h2,
+  .system-section h2,
+  .shipping h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 120px;
+  }
+  
+  .about-text p {
+    width: 520px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 34px;
+  }
+  
+  .about-text h3 {
+    font-size: 22px;
+    line-height: 1.1;
+    margin-top: 30px;
+  }
+  
+  .about-image {
+    height: 810px;
+  }
+  
+  .philosophy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 100px 120px;
+    gap: 70px;
+  }
+  
+  .envelope {
+    height: 640px;
+  }
+  
+  .philosophy-text {
+    padding-top: 140px;
+    transform: rotate(8deg);
+  }
+  
+  .philosophy-text h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 42px;
+  }
+  
+  .philosophy-text p {
+    width: 460px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 30px;
+  }
+  
+  .key-points {
+    padding: 20px 100px 90px;
+  }
+  
+  .key-points h2 {
+    margin-bottom: 50px;
+  }
+  
+  .key-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+  }
+  
+  .key-grid div {
+    height: 350px;
+    background: #202020;
+    color: #fffffa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 0.9;
+  }
+  
+  .system-section {
+    padding: 0 100px 70px;
+  }
+  
+  .system-section h2 {
+    margin-bottom: 45px;
+  }
+  
+  .system-grid {
+    display: grid;
+    grid-template-columns: 1.45fr 0.85fr;
+    gap: 70px;
+  }
+  
+  .system-large {
+    height: 670px;
+  }
+  
+  .system-card {
+    background: #202020;
+    color: #fffffa;
+    padding: 35px;
+    height: 570px;
+  }
+  
+  .system-card-image {
+    height: 270px;
+    margin-bottom: 30px;
+  }
+  
+  .system-card h3 {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  
+  .system-card p {
+    text-align: center;
+    font-size: 13px;
+    margin: 20px 0 45px;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .tags span {
+    border: 1px solid #777;
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+  
+  .shipping {
+    padding: 0 100px 160px;
+    max-width: 650px;
+  }
+  
+  .shipping h2 {
+    margin-bottom: 30px;
+  }
+  
+  .shipping h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 300;
+    margin: 38px 0 20px;
+  }
+  
+  .shipping p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.35;
+    margin-bottom: 16px;
+  }

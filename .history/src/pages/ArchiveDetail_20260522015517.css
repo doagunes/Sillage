@@ -1,0 +1,20 @@
+.archive-detail-page {
+    background: #fffffa;
+    min-height: 100vh;
+  }
+  
+  .archive-detail-wrapper {
+    width: 1100px;
+    margin: 60px auto 120px;
+  }
+  
+  .archive-detail-wrapper img {
+    width: 100%;
+    display: block;
+  }
+  
+  @media (max-width: 900px) {
+    .archive-detail-wrapper {
+      width: calc(100% - 32px);
+    }
+  }

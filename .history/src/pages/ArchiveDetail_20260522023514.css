@@ -1,0 +1,20 @@
+.archive-detail-wrapper {
+    width: 100%;
+    position: relative;
+    margi
+  }
+  
+  .back-button-overlay {
+    position: absolute;
+    top: 120px;
+    left: 110px;
+  
+    width: 70px;
+    height: 70px;
+  
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  
+    z-index: 10;
+  }
