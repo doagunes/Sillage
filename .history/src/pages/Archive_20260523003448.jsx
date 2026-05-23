@@ -7,7 +7,6 @@ import "./Archive.css";
 
 function Archive() {
   const location = useLocation();
-
   const [items, setItems] = useState(archiveItems);
   const [showTracePopup, setShowTracePopup] = useState(false);
   const [draftMemory, setDraftMemory] = useState(null);
@@ -16,7 +15,6 @@ function Archive() {
   useEffect(() => {
     if (location.state?.openTracePopup) {
       setDraftMemory(location.state.draftMemory);
-      setUploadedImage(null);
 
       const timer = setTimeout(() => {
         setShowTracePopup(true);
@@ -25,23 +23,6 @@ function Archive() {
       return () => clearTimeout(timer);
     }
   }, [location.state]);
-
-  const handleLeaveTrace = () => {
-    if (!uploadedImage) {
-      alert("Please upload a memory photo first.");
-      return;
-    }
-
-    const newItem = {
-      id: `user-${Date.now()}`,
-      memoryImage: uploadedImage,
-      perfumeImage: uploadedImage,
-      draftMemory,
-    };
-
-    setItems([newItem, ...items]);
-    setShowTracePopup(false);
-  };
 
   return (
     <div className="archive-page">
@@ -122,7 +103,15 @@ function Archive() {
                 )}
               </div>
 
-              <button className="leave-trace-btn" onClick={handleLeaveTrace}>
+              <button
+                className="leave-trace-btn"
+                onClick={() => {
+                  setShowTracePopup(false);
+                  alert(
+                    "Your memory preview is ready. Database connection will be added later."
+                  );
+                }}
+              >
                 Leave your trace
               </button>
             </div>
@@ -140,7 +129,7 @@ function Archive() {
       </section>
 
       <section className="archive-grid">
-        {items.map((item) => (
+        {archiveItems.map((item) => (
           <Link to={`/archive/${item.id}`} className="archive-card" key={item.id}>
             <div className="archive-card-inner">
               <img
