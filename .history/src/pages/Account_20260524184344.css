@@ -54,6 +54,7 @@
   .memory-creation-card {
     width: 216px;
     height: 216px;
+    background: #e7e4dc;
   }
   
   .account-logout {
@@ -70,7 +71,6 @@
   
   .account-logout:hover {
     background: #111;
-    color: #fff;
   }
   .memory-creation-card {
     width: 216px;

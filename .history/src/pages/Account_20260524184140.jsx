@@ -54,19 +54,13 @@ function Account() {
             {myMemories.length > 0 ? (
               myMemories.map((memory) => (
                 <div className="memory-creation-card" key={memory.id}>
-                  <div className="memory-card-inner">
+                  {memory.memoryImage && (
                     <img
                       src={memory.memoryImage}
                       alt={memory.title}
-                      className="memory-card-front"
+                      className="memory-creation-image"
                     />
-
-                    <img
-                      src={memory.perfumeImage}
-                      alt={memory.title}
-                      className="memory-card-back"
-                    />
-                  </div>
+                  )}
                 </div>
               ))
             ) : (

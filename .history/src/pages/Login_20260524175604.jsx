@@ -17,7 +17,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const result = await login(email, password);
+    const result = login(email, password);
 
     if (!result.success) {
       setErrorMessage(result.message);
