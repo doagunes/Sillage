@@ -23,6 +23,11 @@ function Create() {
   });
 
   const handleCreateFragrance = () => {
+    if (!isLoggedIn) {
+      setShowPopup(true);
+      return;
+    }
+
     const result = analyzeMemory(memoryText);
     setNotes(result);
     setIsCreated(true);

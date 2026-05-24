@@ -1,0 +1,106 @@
+.signup-page {
+    width: 100%;
+    min-height: calc(100vh - 90px);
+    background: #fffffa;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-family: Georgia, "Times New Roman", serif;
+    border-top: 1px solid #111;
+  }
+  
+  .signup-left {
+    position: relative;
+    min-height: calc(100vh - 90px);
+    border-right: 1px solid #111;
+  }
+  
+  .signup-image-box {
+    position: absolute;
+    left: 114px;
+    top: 96px;
+    width: 574px;
+    height: 949px;
+    border: 1px solid #111;
+    box-sizing: border-box;
+    background: transparent;
+  }
+  
+  .signup-right {
+    position: relative;
+    min-height: calc(100vh - 90px);
+  }
+  
+  .signup-title {
+    position: absolute;
+    left: 89px;
+    top: 196px;
+    margin: 0;
+    color: #111;
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  
+  .signup-form {
+    position: absolute;
+    left: 89px;
+    top: 311px;
+    width: 433px;
+    display: flex;
+    flex-direction: column;
+    gap: 51px;
+  }
+  
+  .signup-form input {
+    width: 433px;
+    height: 50px;
+    border: 1px solid rgba(102, 102, 102, 0.35);
+    background: transparent;
+    box-sizing: border-box;
+    padding: 0 21px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    outline: none;
+  }
+  
+  .signup-form input::placeholder {
+    color: #777;
+    opacity: 1;
+  }
+  
+  .signup-button {
+    width: 332px;
+    height: 62px;
+    margin-top: 78px;
+    border: 1px solid #111;
+    background: #fff;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .signup-button:hover {
+    background: #111;
+    color: #fff;
+  }
+  
+  .signup-login-text {
+    position: absolute;
+    left: 89px;
+    top: 785px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+  }
+  
+  .signup-login-text a {
+    color: #111;
+    text-decoration: underline;
+  }

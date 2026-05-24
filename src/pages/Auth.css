@@ -1,0 +1,98 @@
+.auth-page {
+    min-height: calc(100vh - 90px);
+    background: #f7f7f3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-top: 1px solid #111;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  
+  .auth-left {
+    position: relative;
+    border-right: 1px solid #111;
+    min-height: calc(100vh - 90px);
+  }
+  
+  .auth-image-placeholder {
+    position: absolute;
+    left: 120px;
+    top: 150px;
+    width: 540px;
+    height: 560px;
+    border: 1px solid #111;
+    background: transparent;
+  }
+  
+  .auth-right {
+    position: relative;
+    min-height: calc(100vh - 90px);
+    padding: 0;
+  }
+  
+  .auth-right h1 {
+    position: absolute;
+    top: 145px;
+    left: 115px;
+    margin: 0;
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 700;
+    color: #111;
+  }
+  
+  .auth-form {
+    position: absolute;
+    top: 300px;
+    left: 115px;
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .auth-form input {
+    width: 100%;
+    height: 64px;
+    border: 1px solid #111;
+    background: transparent;
+    padding: 0 24px;
+    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #111;
+    outline: none;
+  }
+  
+  .auth-form input::placeholder {
+    color: #777;
+  }
+  
+  .auth-main-button {
+    width: 100%;
+    height: 74px;
+    margin-top: 25px;
+    border: 1px solid #111;
+    background: #111;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .auth-switch-text {
+    position: absolute;
+    left: 115px;
+    top: 750px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #111;
+  }
+  
+  .auth-switch-text a {
+    color: #111;
+    text-decoration: underline;
+  }

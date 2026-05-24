@@ -1,0 +1,77 @@
+.account-page {
+    min-height: 100vh;
+    background: #fffffa;
+    color: #111;
+  }
+  
+  .account-main {
+    min-height: calc(100vh - 90px);
+    display: grid;
+    grid-template-columns: 38% 62%;
+    background: #fffffa;
+    border-top: 1px solid #111;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  
+  .account-left {
+    border-right: 1px solid #111;
+    padding: 90px 70px;
+  }
+  
+  .account-left h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  
+  .account-info {
+    margin-top: 70px;
+    font-size: 24px;
+    line-height: 1.6;
+  }
+  
+  .account-info p {
+    margin: 0 0 12px;
+  }
+  
+  .account-logout {
+    margin-top: 70px;
+    width: 250px;
+    height: 62px;
+    border: 1px solid #111;
+    background: #111;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  .account-logout:hover {
+    background: transparent;
+    color: #111;
+  }
+  
+  .account-right {
+    padding: 90px 80px;
+  }
+  
+  .account-right h2 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  
+  .account-memory-grid {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+  }
+  
+  .account-memory-card {
+    height: 360px;
+    border: 1px solid #111;
+    background: transparent;
+  }
