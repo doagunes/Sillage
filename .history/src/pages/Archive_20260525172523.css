@@ -1,0 +1,264 @@
+.archive-page {
+  background: #fffffa;
+  color: #111;
+}
+
+.archive-intro {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0 70px;
+}
+
+.archive-intro p {
+  width: 520px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.archive-grid {
+  width: 1280px;
+  margin: 0 auto 120px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.archive-card {
+  display: block;
+  height: 300px;
+  perspective: 1000px;
+  text-decoration: none;
+}
+
+.archive-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.archive-card:hover .archive-card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: #202020;
+  object-fit: contain;
+  padding: 28px;
+}
+
+/* TRACE POPUP */
+
+.trace-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trace-popup {
+  width: 1180px;
+  height: 690px;
+  background: #3f3d3d;
+  color: #f7f7f3;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 1.15fr;
+  gap: 38px;
+
+  padding: 34px 70px 55px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.trace-popup-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: #f7f7f3;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.trace-left,
+.trace-middle,
+.trace-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.trace-popup label {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.trace-popup input,
+.trace-popup textarea {
+  background: transparent;
+  border: 1px solid #f7f7f3;
+  color: #f7f7f3;
+  font-size: 18px;
+  padding: 12px;
+  outline: none;
+  margin-bottom: 28px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.trace-popup input {
+  height: 62px;
+}
+
+.trace-popup textarea {
+  height: 155px;
+  resize: none;
+}
+
+.trace-notes-box {
+  height: 390px;
+  border: 1px solid #f7f7f3;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.trace-notes-box p {
+  font-size: 20px;
+  border-bottom: 1px solid #f7f7f3;
+  display: inline-block;
+  margin: 0 0 8px;
+}
+
+.trace-notes-box span {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 48px;
+  color: #ddd;
+}
+
+.trace-upload-box {
+  height: 390px;
+  background: #fffffa;
+  color: #202020;
+  border: 2px dashed #cfd4d8;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.upload-cloud {
+  font-size: 46px;
+  margin-bottom: 30px;
+}
+
+.trace-upload-box p {
+  font-size: 26px;
+  line-height: 1.25;
+  margin: 0 0 28px;
+}
+
+.trace-upload-box button {
+  width: 70px;
+  height: 70px;
+  background: #202020;
+  color: #fffffa;
+  border: none;
+  font-size: 42px;
+  cursor: pointer;
+}
+
+.leave-trace-btn {
+  height: 78px;
+  margin-top: auto;
+  background: transparent;
+  border: 1px solid #f7f7f3;
+  color: #f7f7f3;
+  font-size: 30px;
+  font-style: italic;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .archive-intro,
+  .archive-grid {
+    width: calc(100% - 32px);
+  }
+
+  .archive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .archive-card {
+    height: 230px;
+  }
+
+  .trace-popup {
+    width: calc(100% - 32px);
+    height: auto;
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+}
+.trace-upload-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-plus-button {
+  width: 70px;
+  height: 70px;
+  background: #202020;
+  color: #fffffa;
+  font-size: 42px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.archive-card img {
+  filter: grayscale(100%);
+}
+.perfume-card-back {
+  background: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfume-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card-back img:not(.perfume-perfume-img) {
+  width: 92%;
+  height: 92%;
+  object-fit: contain;
+}

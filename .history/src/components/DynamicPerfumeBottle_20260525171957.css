@@ -1,0 +1,40 @@
+.dynamic-perfume {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .dynamic-perfume-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  
+  .dynamic-perfume-label {
+    position: absolute;
+    left: 70px;
+    top: 59%;
+    width: 44%;
+    text-align: left;
+    color: #5a524d;
+    font-family: "Cormorant Garamond", serif;
+    pointer-events: none;
+  }
+  
+  .dynamic-perfume-label p {
+    margin: 0;
+    font-size: clamp(10px, 1.8vw, 24px);
+    line-height: 1.1;
+    word-break: break-word;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+  
+  .dynamic-perfume.small .dynamic-perfume-label p {
+    font-size: 9px;
+  }
+  
+  .dynamic-perfume.large .dynamic-perfume-label p {
+    font-size: 24px;
+  }

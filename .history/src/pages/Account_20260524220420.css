@@ -1,0 +1,114 @@
+.account-page {
+    min-height: 100vh;
+    background: #fffffa;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+    position: relative;
+    padding: 54px 0 100px 72px;
+    box-sizing: border-box;
+  }
+  
+  .account-back {
+    border: none;
+    background: transparent;
+    font-size: 34px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    cursor: pointer;
+    color: #111;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+  
+  .account-content {
+    width: 420px;
+  }
+  
+  .account-content h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  
+  .account-line {
+    width: 414px;
+    height: 1px;
+    background: #111;
+    margin: 10px 0 40px;
+  }
+  
+  .account-content h2 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  
+  .memory-creations-grid {
+    display: grid;
+    grid-template-columns: 216px;
+    gap: 24px;
+  }
+  
+  .memory-creation-card {
+    width: 216px;
+    height: 216px;
+  }
+  
+  .account-logout {
+    margin-top: 48px;
+    width: 216px;
+    height: 50px;
+    border: 1px solid #111;
+    background: transparent;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .account-logout:hover {
+    background: #111;
+    color: #fff;
+  }
+  .memory-creation-card {
+    width: 216px;
+    height: 216px;
+    perspective: 1000px;
+  }
+  
+  .memory-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .memory-creation-card:hover .memory-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .memory-card-front,
+  .memory-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  inset: 0;
+  backface-visibility: hidden;
+  filter: grayscale(100%);
+  }
+  
+  .memory-card-back {
+    transform: rotateY(180deg);
+  }
+    
+  .no-memories-text {
+    font-size: 16px;
+    color: #777;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 280px;
+  }
