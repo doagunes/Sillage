@@ -1,0 +1,45 @@
+.footer {
+  background: #1d1d1f;
+  color: #f5f5f2;
+
+  padding: 42px 90px 52px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.4fr 1.2fr 1.6fr;
+
+  align-items: start;
+  column-gap: 70px;
+}
+
+.footer-brand img {
+  width: 320px;
+  height: auto;
+  display: block;
+}
+
+.footer-column h3 {
+  margin: 0 0 26px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #f5f5f2;
+}
+
+.footer-column p,
+.footer-column a {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: rgba(255,255,255,0.78);
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.footer-column a:hover {
+  color: white;
+}

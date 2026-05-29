@@ -1,0 +1,410 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fffffa;
+}
+
+.homepage {
+  width: 100%;
+  min-height: 100vh;
+  background: #fffffa;
+  color: #111;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  max-width: 1440px;
+  height: 705px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  background: #fffffa;
+}
+
+.hero-image {
+  height: 650px;
+  align-self: end;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.polaroid {
+  position: absolute;
+  top: 22px;
+  left: 33%;
+  width: 230px;
+  height: 295px;
+  transform: rotate(-14deg);
+  z-index: 2;
+  background: transparent;
+  border: none;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-content {
+  padding: 42px 90px 56px 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-content h1 {
+  margin: 0;
+  max-width: 650px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 43px;
+  font-weight: 300;
+  line-height: 1.23;
+  letter-spacing: 0.02em;
+}
+
+.hero-bottom {
+  max-width: 560px;
+}
+
+.hero-content p {
+  margin: 0 0 24px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.28;
+}
+
+.hero-content p b {
+  font-weight: 700;
+}
+
+.hero-content button {
+  width: 455px;
+  height: 58px;
+  background: transparent;
+  border: 1px solid #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background: #111;
+  color: #fffffa;
+}
+
+/* LOGO STRIP */
+
+.logo-strip {
+  max-width: 1440px;
+  height: 180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/* POPULAR */
+
+.popular {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 70px 110px 120px;
+  border-bottom: 1px solid #111;
+}
+
+.popular h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 300;
+  margin: 0 0 12px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.product-card {
+  border: 1px solid #111;
+  padding: 14px;
+  min-height: 430px;
+}
+
+.product-image {
+  height: 315px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  width: 100%;
+  height: 36px;
+  background: transparent;
+  border: 1px solid #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* STATEMENT */
+
+/* STATEMENT */
+
+.statement {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-bottom: 1px solid #111;
+  overflow: hidden;
+}
+
+.statement-image {
+  position: absolute;
+  inset: 0;
+}
+
+.statement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.statement h2 {
+  position: absolute;
+
+  right: 120px;
+  top: 65px;
+
+  width: 380px;
+
+  text-align: center;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.18;
+
+  color: #222;
+}
+
+/* WHY */
+
+.w/* WHY */
+
+.why {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 520px 520px;
+  border-bottom: 1px solid #111;
+}
+
+.why-title-box {
+  background: #fffffa;
+  border-right: 1px solid #111;
+  border-bottom: 1px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-title-box h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.why-dark-box {
+  background: #202020;
+  color: #fffffa;
+  border-bottom: 1px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-dark-box p {
+  width: 430px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.why-image-box {
+  border-right: 1px solid #111;
+  overflow: hidden;
+}
+
+.why-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.why-text-box {
+  background: #fffffa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-text-box p {
+  width: 440px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+/* PACKAGE */
+
+.package {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 850px;
+}
+
+.package-text {
+  padding: 80px 95px;
+}
+
+.package-text h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.12;
+  margin: 0 0 350px;
+}
+
+.package-text p {
+  max-width: 500px;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.28;
+}
+
+.package-image {
+  height: 660px;
+  margin-top: 35px;
+  overflow: hidden;
+}
+
+.package-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PLACEHOLDER */
+
+.placeholder {
+  background: #e4e0da;
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .hero,
+  .why,
+  .package {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .hero-image {
+    height: 520px;
+  }
+
+  .polaroid {
+    top: 24px;
+    left: 52%;
+    width: 170px;
+    height: 220px;
+  }
+
+  .hero-content {
+    padding: 40px 28px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 90px;
+  }
+
+  .hero-content button {
+    width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-strip {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 30px;
+    padding: 50px;
+  }
+
+  .statement h2 {
+    right: 24px;
+    width: 300px;
+    font-size: 30px;
+  }
+
+  .why-left h2 {
+    font-size: 44px;
+  }
+}
