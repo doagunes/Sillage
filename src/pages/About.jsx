@@ -1,6 +1,21 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./About.css";
+import aboutFlower from "../assets/about/about-flower.svg";
+import envelopeSvg from "../assets/about/envelope.svg";
+import paperSvg from "../assets/about/paper.svg";
+import key1Front from "../assets/about/key-1-front.svg";
+import key1Back from "../assets/about/key-1-back.svg";
+import key2Front from "../assets/about/key-2-front.svg";
+import key2Back from "../assets/about/key-2-back.svg";
+import key3Front from "../assets/about/key-3-front.svg";
+import key3Back from "../assets/about/key-3-back.svg";
+import systemLeft from "../assets/about/system-left.svg";
+import system1 from "../assets/about/system-1.png";
+import system2 from "../assets/about/system-2.png";
+import system3 from "../assets/about/system-3.png";
+import system4 from "../assets/about/system-4.png";
+import system5 from "../assets/about/system-5.png";
 
 function About() {
   return (
@@ -17,11 +32,10 @@ function About() {
           </p>
 
           <p>
-            Your scent is never just a scent. It is a memory suspended in the
-            air, a trace that lingers long after you leave. At Sillage, every
-            fragrance begins with you. Your memories, emotions and moments are
-            transformed into a personalized composition of notes crafted to
-            capture the essence of your story.
+          Your scent is never just a scent. It is a memory suspended in the air, a trace that lingers long after you leave. At Sillage, every fragrance begins with you. Your memories, emotions and moments are transformed into a personalized composition of notes crafted to capture the essence of your story. By translating memories into scent, we create more than a perfume; we create a lasting signature. Sillage is the invisible footprint you leave behind intimate, unforgettable and entirely your own.
+          </p>
+          <p>
+          Each Sillage perfume begins with your story. From the memory you write, to the notes you choose, to the bottle and packaging you customize, every detail is tailored for  you.  No two fragrances are ever the same.
           </p>
 
           <h3>
@@ -31,11 +45,18 @@ function About() {
           </h3>
         </div>
 
-        <div className="about-image placeholder">IMAGE</div>
+        <div className="about-image">
+          <img src={aboutFlower} alt="Sillage flower" />
+        </div>
       </section>
 
       <section className="philosophy">
-        <div className="envelope placeholder">IMAGE</div>
+  <div className="envelope">
+    <img src={envelopeSvg} alt="Envelope" />
+  </div>
+
+  <div className="philosophy-paper">
+    <img src={paperSvg} alt="" className="paper-bg" />
 
         <div className="philosophy-text">
           <h2>
@@ -45,51 +66,50 @@ function About() {
           </h2>
 
           <p>
-            The idea for this brand emerged from a personal experience during
-            the COVID-19 pandemic. After recovering from the illness, I
-            temporarily lost my sense of smell. During that time, I realized how
-            closely scent is connected to memory.
+          The idea for this brand emerged from a personal experience during the COVID-19 pandemic. After recovering from the illness, I temporarily lost my sense of smell. During that time, I realized how closely scent is connected to memory. Normally, certain smells can instantly bring back specific moments from our lives. However, without the ability to smell, those sensory connections began to fade, and I noticed how difficult it was to associate memories with the scents that once triggered them.
           </p>
 
           <p>
-            This experience made me reflect on how fragile sensory memories can
-            be. Smell is one of the strongest triggers of memory, yet it is also
-            one of the easiest senses to lose or forget.
+          This experience made me reflect on how fragile sensory memories can be. Smell is one of the strongest triggers of memory, yet it is also one of the easiest senses to lose or forget. That realization inspired the idea of creating a system where memories could be preserved through scent.
           </p>
         </div>
+      </div>
       </section>
 
       <section className="key-points">
-        <h2>KEY POINTS OF SILLAGE</h2>
+      <h2>KEY POINTS OF SILLAGE</h2>
 
-        <div className="key-grid">
-          <div>Memory<br />Centric<br />Design</div>
-          <div>Custom<br />Made<br />Creations</div>
-          <div>Fragrance<br />System</div>
-        </div>
-      </section>
+      <div className="key-grid">
+        <FlipKeyCard front={key1Front} back={key1Back} title="Memory Centric Design" />
+        <FlipKeyCard front={key2Front} back={key2Back} title="Custom Made Creations" />
+        <FlipKeyCard front={key3Front} back={key3Back} title="Fragrance System" />
+      </div>
+    </section>
 
-      <section className="system-section">
-        <h2>HOW SILLAGE’S SYSTEM WORKS</h2>
+    <section className="system-section">
+  <h2>HOW SILLAGE’S SYSTEM WORKS</h2>
 
-        <div className="system-grid">
-          <div className="system-large placeholder">IMAGE</div>
+  <div className="system-grid">
+    <div className="system-large">
+      <img src={systemLeft} alt="Sillage system visual" />
+    </div>
 
-          <div className="system-card">
-            <div className="system-card-image placeholder">IMAGE</div>
-            <h3>1- MEMORY AS STRUCTURE</h3>
-            <p>Every memory is built through six key dimensions.</p>
+    <div className="system-scroll-area">
+      <div className="system-scroll">
+        {[system1, system2, system3, system4, system5].map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`Sillage system step ${index + 1}`}
+            className="system-step-img"
+          />
+        ))}
+      </div>
 
-            <div className="tags">
-              <span>place</span>
-              <span>people</span>
-              <span>time</span>
-              <span>emotion</span>
-              <span>experience</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <p className="scroll-down-text">Scroll down ↓</p>
+    </div>
+  </div>
+</section>
 
       <section className="shipping">
         <h2>SHIPPING & RETURNS</h2>
@@ -129,6 +149,16 @@ function About() {
       </section>
 
       <Footer />
+    </div>
+  );
+}
+function FlipKeyCard({ front, back, title }) {
+  return (
+    <div className="key-card">
+      <div className="key-card-inner">
+        <img src={front} alt={title} className="key-card-face key-card-front" />
+        <img src={back} alt={`${title} description`} className="key-card-face key-card-back" />
+      </div>
     </div>
   );
 }

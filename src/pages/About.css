@@ -23,52 +23,85 @@
   
   .about-text p {
     width: 520px;
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 300;
     line-height: 1.25;
     margin-bottom: 34px;
   }
   
   .about-text h3 {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.1;
     margin-top: 30px;
   }
   
   .about-image {
-    height: 810px;
+    height: 790px;
+  
+    overflow: hidden;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+    display: block;
   }
   
   .philosophy {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px 100px 120px;
-    gap: 70px;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+    padding: 40px 100px 140px;
+    overflow: hidden;
   }
   
   .envelope {
-    height: 640px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .envelope img {
+    width: 100%;
+    display: block;
+  }
+  
+  .philosophy-paper {
+    position: relative;
+    width: 650px;
+    margin-left: -150px;
+  
+    transform: rotate(4deg);
+    transform-origin: center;
+  }
+  
+  .paper-bg {
+    width: 100%;
+    display: block;
   }
   
   .philosophy-text {
-    padding-top: 140px;
-    transform: rotate(8deg);
+    position: absolute;
+    inset: 55px 55px 60px 55px;
+    transform: none;
+    transform: rotate(6deg);
+
   }
   
   .philosophy-text h2 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 46px;
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 42px;
+    font-size: 48px;
+    font-weight: 100;
+    line-height: 0.95;
+    margin: 0 0 34px;
   }
   
   .philosophy-text p {
-    width: 460px;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.25;
-    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 50;
+    line-height: 1.28;
+    margin: 0 0 28px;
   }
   
   .key-points {
@@ -76,7 +109,11 @@
   }
   
   .key-points h2 {
-    margin-bottom: 50px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 45px;
+    font-weight: 20;
+    margin: 0 0 50px;
+    color:#202020;
   }
   
   .key-grid {
@@ -85,74 +122,99 @@
     gap: 36px;
   }
   
-  .key-grid div {
+  .key-card {
     height: 350px;
-    background: #202020;
-    color: #fffffa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 48px;
-    font-weight: 300;
-    line-height: 0.9;
+    perspective: 1000px;
+    margin-bottom: 50px;
+  }
+  
+  .key-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .key-card:hover .key-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .key-card-face {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    backface-visibility: hidden;
+    display: block;
+  }
+  
+  .key-card-back {
+    transform: rotateY(180deg);
   }
   
   .system-section {
-    padding: 0 100px 70px;
+    padding: 0 90px 90px;
   }
   
   .system-section h2 {
-    margin-bottom: 45px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 0 0 50px;
   }
   
   .system-grid {
     display: grid;
-    grid-template-columns: 1.45fr 0.85fr;
+    grid-template-columns: 62% 34%;
     gap: 70px;
+    align-items: start;
   }
   
   .system-large {
-    height: 670px;
+    height: 690px;
+    overflow: hidden;
   }
   
-  .system-card {
-    background: #202020;
-    color: #fffffa;
-    padding: 35px;
-    height: 570px;
+  .system-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   
-  .system-card-image {
-    height: 270px;
-    margin-bottom: 30px;
+  .system-scroll-area {
+    width: 100%;
   }
   
-  .system-card h3 {
-    text-align: center;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 24px;
+  .system-scroll {
+    height: 610px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+  
+    scrollbar-width: none;
+  }
+  
+  .system-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .system-step-img {
+    width: 100%;
+    height: 610px;
+    object-fit: cover;
+    display: block;
+    scroll-snap-align: start;
+  }
+  
+  .scroll-down-text {
+    margin: 14px 0 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px;
     font-weight: 300;
-  }
-  
-  .system-card p {
-    text-align: center;
-    font-size: 13px;
-    margin: 20px 0 45px;
-  }
-  
-  .tags {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .tags span {
-    border: 1px solid #777;
-    padding: 7px 12px;
-    font-size: 10px;
+    color: #333;
   }
   
   .shipping {
@@ -162,6 +224,7 @@
   
   .shipping h2 {
     margin-bottom: 30px;
+    font-size: 40px;
   }
   
   .shipping h3 {

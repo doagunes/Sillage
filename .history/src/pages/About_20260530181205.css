@@ -1,0 +1,241 @@
+.about-page {
+    background: #fffffa;
+    color: #111;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .about-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 100px 90px;
+    gap: 90px;
+  }
+  
+  .about-text h1,
+  .key-points h2,
+  .system-section h2,
+  .shipping h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 120px;
+  }
+  
+  .about-text p {
+    width: 520px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 34px;
+  }
+  
+  .about-text h3 {
+    font-size: 24px;
+    line-height: 1.1;
+    margin-top: 30px;
+  }
+  
+  .about-image {
+    height: 790px;
+  
+    overflow: hidden;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+    display: block;
+  }
+  
+  .philosophy {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+    padding: 40px 100px 140px;
+    overflow: hidden;
+  }
+  
+  .envelope {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .envelope img {
+    width: 100%;
+    display: block;
+  }
+  
+  .philosophy-paper {
+    position: relative;
+    width: 650px;
+    margin-left: -150px;
+  
+    transform: rotate(4deg);
+    transform-origin: center;
+  }
+  
+  .paper-bg {
+    width: 100%;
+    display: block;
+  }
+  
+  .philosophy-text {
+    position: absolute;
+    inset: 55px 55px 60px 55px;
+    transform: none;
+    transform: rotate(6deg);
+
+  }
+  
+  .philosophy-text h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 100;
+    line-height: 0.95;
+    margin: 0 0 34px;
+  }
+  
+  .philosophy-text p {
+    font-size: 22px;
+    font-weight: 50;
+    line-height: 1.28;
+    margin: 0 0 28px;
+  }
+  
+  .key-points {
+    padding: 20px 100px 90px;
+  }
+  
+  .key-points h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 45px;
+    font-weight: 20;
+    margin: 0 0 50px;
+    color:#202020;
+  }
+  
+  .key-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+  }
+  
+  .key-card {
+    height: 350px;
+    perspective: 1000px;
+    margin-bottom: 50px;
+  }
+  
+  .key-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .key-card:hover .key-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .key-card-face {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    backface-visibility: hidden;
+    display: block;
+  }
+  
+  .key-card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .system-section {
+    padding: 0 90px 90px;
+  }
+  
+  .system-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4px;
+    font-weight: 100;
+    margin: 0 0 50px;
+  }
+  
+  .system-grid {
+    display: grid;
+    grid-template-columns: 62% 34%;
+    gap: 70px;
+    align-items: start;
+  }
+  
+  .system-large {
+    height: 690px;
+    overflow: hidden;
+  }
+  
+  .system-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .system-scroll-area {
+    width: 100%;
+  }
+  
+  .system-scroll {
+    height: 610px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+  
+    scrollbar-width: none;
+  }
+  
+  .system-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .system-step-img {
+    width: 100%;
+    height: 610px;
+    object-fit: cover;
+    display: block;
+    scroll-snap-align: start;
+  }
+  
+  .scroll-down-text {
+    margin: 14px 0 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+  }
+  
+  .shipping {
+    padding: 0 100px 160px;
+    max-width: 650px;
+  }
+  
+  .shipping h2 {
+    margin-bottom: 30px;
+  }
+  
+  .shipping h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 300;
+    margin: 38px 0 20px;
+  }
+  
+  .shipping p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.35;
+    margin-bottom: 16px;
+  }

@@ -1,0 +1,166 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "./About.css";
+import aboutFlower from "../assets/about/about-flower.svg";
+import envelopeSvg from "../assets/about/envelope.svg";
+import paperSvg from "../assets/about/paper.svg";
+import key1Front from "../assets/about/key-1-front.svg";
+import key1Back from "../assets/about/key-1-back.svg";
+import key2Front from "../assets/about/key-2-front.svg";
+import key2Back from "../assets/about/key-2-back.svg";
+import key3Front from "../assets/about/key-3-front.svg";
+import key3Back from "../assets/about/key-3-back.svg";
+import systemLeft from "../assets/about/system-left.svg";
+import system1 from "../assets/about/system-1.png";
+import system2 from "../assets/about/system-2.png";
+import system3 from "../assets/about/system-3.png";
+import system4 from "../assets/about/system-4.png";
+import system5 from "../assets/about/system-5.png";
+
+function About() {
+  return (
+    <div className="about-page">
+      <Navbar />
+
+      <section className="about-intro">
+        <div className="about-text">
+          <h1>DEFINING SILLAGE</h1>
+
+          <p>
+            Sillage (n.) /sē-yäzh/ <br />
+            The trail left by a person's perfume.
+          </p>
+
+          <p>
+          Your scent is never just a scent. It is a memory suspended in the air, a trace that lingers long after you leave. At Sillage, every fragrance begins with you. Your memories, emotions and moments are transformed into a personalized composition of notes crafted to capture the essence of your story. By translating memories into scent, we create more than a perfume; we create a lasting signature. Sillage is the invisible footprint you leave behind intimate, unforgettable and entirely your own.
+          </p>
+          <p>
+          Each Sillage perfume begins with your story. From the memory you write, to the notes you choose, to the bottle and packaging you customize, every detail is tailored for  you.  No two fragrances are ever the same.
+          </p>
+
+          <h3>
+            Not created for everyone.
+            <br />
+            Created only for you.
+          </h3>
+        </div>
+
+        <div className="about-image">
+          <img src={aboutFlower} alt="Sillage flower" />
+        </div>
+      </section>
+
+      <section className="philosophy">
+  <div className="envelope">
+    <img src={envelopeSvg} alt="Envelope" />
+  </div>
+
+  <div className="philosophy-paper">
+    <img src={paperSvg} alt="" className="paper-bg" />
+
+        <div className="philosophy-text">
+          <h2>
+            PHILOSOPHY
+            <br />
+            BEHIND
+          </h2>
+
+          <p>
+          The idea for this brand emerged from a personal experience during the COVID-19 pandemic. After recovering from the illness, I temporarily lost my sense of smell. During that time, I realized how closely scent is connected to memory. Normally, certain smells can instantly bring back specific moments from our lives. However, without the ability to smell, those sensory connections began to fade, and I noticed how difficult it was to associate memories with the scents that once triggered them.
+          </p>
+
+          <p>
+          This experience made me reflect on how fragile sensory memories can be. Smell is one of the strongest triggers of memory, yet it is also one of the easiest senses to lose or forget. That realization inspired the idea of creating a system where memories could be preserved through scent.
+          </p>
+        </div>
+      </div>
+      </section>
+
+      <section className="key-points">
+      <h2>KEY POINTS OF SILLAGE</h2>
+
+      <div className="key-grid">
+        <FlipKeyCard front={key1Front} back={key1Back} title="Memory Centric Design" />
+        <FlipKeyCard front={key2Front} back={key2Back} title="Custom Made Creations" />
+        <FlipKeyCard front={key3Front} back={key3Back} title="Fragrance System" />
+      </div>
+    </section>
+
+    <section className="system-section">
+  <h2>HOW SILLAGE’S SYSTEM WORKS</h2>
+
+  <div className="system-grid">
+    <div className="system-large">
+      <img src={systemLeft} alt="Sillage system visual" />
+    </div>
+
+    <div className="system-scroll-area">
+      <div className="system-scroll">
+        {[system1, system2, system3, system4, system5].map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`Sillage system step ${index + 1}`}
+            className="system-step-img"
+          />
+        ))}
+      </div>
+
+      <p className="scroll-down-text">Scroll down ↓</p>
+    </div>
+  </div>
+</section>
+
+      <section className="shipping">
+        <h2>SHIPPING & RETURNS</h2>
+
+        <h3>Shipping</h3>
+        <p>
+          Every scent is created from a personal memory and prepared
+          individually. Because of this, each order is made with care and may
+          require additional time before shipping.
+        </p>
+
+        <p>Please allow:</p>
+        <p>* 3–7 business days for production</p>
+        <p>* 2–5 business days for domestic shipping</p>
+        <p>* 7–14 business days for international shipping</p>
+
+        <h3>Return & Refunds</h3>
+        <p>
+          As every fragrance is custom-made, we are unable to accept returns for
+          change of mind. Refunds or replacements are only offered if your item
+          arrives damaged, you receive the wrong product, or your package is
+          lost before being marked as delivered.
+        </p>
+
+        <h3>Incorrect Addresses</h3>
+        <p>
+          Please carefully check your shipping address before placing your
+          order. We are not responsible for orders shipped to incorrectly entered
+          addresses.
+        </p>
+
+        <h3>Questions</h3>
+        <p>
+          For any questions regarding your order, shipping or delivery, please
+          contact us at info@sillageperfumery.com.
+        </p>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+function FlipKeyCard({ front, back, title }) {
+  return (
+    <div className="key-card">
+      <div className="key-card-inner">
+        <img src={front} alt={title} className="key-card-face key-card-front" />
+        <img src={back} alt={`${title} description`} className="key-card-face key-card-back" />
+      </div>
+    </div>
+  );
+}
+
+export default About;
