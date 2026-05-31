@@ -383,8 +383,8 @@ function Create() {
             </div>
 
             <div className="packaging-image">
-              <img src={customizedPackaging} alt="Customized packaging" />
-            </div>
+  <img src={customizedPackaging} alt="Customized packaging" />
+</div>
           </label>
         </div>
 

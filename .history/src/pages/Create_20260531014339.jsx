@@ -7,21 +7,15 @@ import { analyzeMemory } from "../utils/analyzeMemory";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
 import createHeroImage from "../assets/create/create-hero.svg";
-import tagImage from "../assets/create/tag.svg";
-import tagPhoto from "../assets/create/tag-photo.svg";
-import packagePreview from "../assets/create/package-preview.svg";
-import classicalPackaging from "../assets/create/classical-packaging.svg";
-import customizedPackaging from "../assets/create/customized-packaging.svg";
 import "./Create.css";
+
 
 function Create() {
   const navigate = useNavigate();
   const { addToCart } = useCart();
   const { isLoggedIn } = useAuth();
-
   const [cartError, setCartError] = useState("");
   const [showPopup, setShowPopup] = useState(false);
-
   const [memoryText, setMemoryText] = useState("");
   const [memoryTitle, setMemoryTitle] = useState("");
   const [isCreated, setIsCreated] = useState(false);
@@ -39,8 +33,6 @@ function Create() {
   });
 
   const handleCreateFragrance = () => {
-    if (!memoryTitle.trim()) return;
-
     const result = analyzeMemory(memoryText);
     setNotes(result);
     setIsCreated(true);
@@ -71,32 +63,32 @@ function Create() {
       setCartError("Please create your fragrance first.");
       return;
     }
-
+  
     if (!isLoggedIn) {
       setShowPopup(true);
       return;
     }
-
+  
     if (!concentration) {
       setCartError("Please choose your preferred concentration.");
       return;
     }
-
+  
     if (!volume) {
       setCartError("Please select the volume.");
       return;
     }
-
+  
     if (!packagingType) {
       setCartError("Please choose a packaging type.");
       return;
     }
-
+  
     if (packagingType === "customized" && !packageImage) {
       setCartError("Please upload an image for customized packaging.");
       return;
     }
-
+  
     addToCart({
       title: memoryTitle,
       memory: memoryText,
@@ -107,7 +99,7 @@ function Create() {
       packageImage,
       memoryLine,
     });
-
+  
     setCartError("");
     navigate("/cart");
   };
@@ -137,8 +129,8 @@ function Create() {
         </div>
 
         <div className="create-hero-image">
-          <img src={createHeroImage} alt="People gathered around a dinner table" />
-        </div>
+  <img src={createHeroImage} alt="People gathered around a dinner table" />
+</div>
       </section>
 
       <section className="steps-grid">
@@ -190,11 +182,7 @@ function Create() {
             />
           </div>
 
-          <button
-            className="create-fragrance-btn"
-            onClick={handleCreateFragrance}
-            disabled={!memoryTitle.trim()}
-          >
+          <button onClick={handleCreateFragrance}>
             Create Your Own Fragrance
           </button>
         </div>
@@ -271,32 +259,36 @@ function Create() {
 
       <section className="archive-save">
         <button
-          className="save-trace-btn"
           onClick={handleSaveToArchive}
           disabled={!isCreated}
+          className={!isCreated ? "disabled-save" : ""}
         >
           Save and leave your trace on the archive!
         </button>
       </section>
 
       <section className="tag-section">
-  <div className="scroll-hint">
-    <span>Scroll down for</span>
-    <span>customize your packaging ↓</span>
-  </div>
+        <div className="scroll-hint">
+          <span>Scroll down for</span>
+          <span>customize your packaging ↓</span>
+        </div>
 
-  <img className="tag-img" src={tagImage} alt="Fragrance tag" />
+        <div className="tag placeholder">
+          This fragrance is not
+          <br />
+          designed to please
+          <br />
+          but to reflect.
+        </div>
 
-  <img className="tag-photo-img" src={tagPhoto} alt="Perfume lifestyle visual" />
-</section>
+        <div className="tag-photo placeholder">IMAGE</div>
+      </section>
 
       <section className="customize-section">
         <h2>CUSTOMIZE YOUR FRAGRANCE</h2>
 
         <div className="customize-grid">
-        <div className="package-preview">
-          <img src={packagePreview} alt="Customized perfume package preview" />
-        </div>
+          <div className="package-preview placeholder">IMAGE</div>
 
           <div className="package-customize-panel">
             <h3>Upload Image to Customize the Packaging</h3>
@@ -362,9 +354,7 @@ function Create() {
               Classical Packaging
             </div>
 
-            <div className="packaging-image">
-              <img src={classicalPackaging} alt="Classical packaging" />
-            </div>
+            <div className="packaging-image placeholder">IMAGE</div>
           </label>
 
           <label
@@ -382,9 +372,7 @@ function Create() {
               Customized Packaging
             </div>
 
-            <div className="packaging-image">
-              <img src={customizedPackaging} alt="Customized packaging" />
-            </div>
+            <div className="packaging-image placeholder">IMAGE</div>
           </label>
         </div>
 

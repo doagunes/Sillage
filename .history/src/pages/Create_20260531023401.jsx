@@ -7,11 +7,6 @@ import { analyzeMemory } from "../utils/analyzeMemory";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
 import createHeroImage from "../assets/create/create-hero.svg";
-import tagImage from "../assets/create/tag.svg";
-import tagPhoto from "../assets/create/tag-photo.svg";
-import packagePreview from "../assets/create/package-preview.svg";
-import classicalPackaging from "../assets/create/classical-packaging.svg";
-import customizedPackaging from "../assets/create/customized-packaging.svg";
 import "./Create.css";
 
 function Create() {
@@ -280,23 +275,27 @@ function Create() {
       </section>
 
       <section className="tag-section">
-  <div className="scroll-hint">
-    <span>Scroll down for</span>
-    <span>customize your packaging ↓</span>
-  </div>
+        <div className="scroll-hint">
+          <span>Scroll down for</span>
+          <span>customize your packaging ↓</span>
+        </div>
 
-  <img className="tag-img" src={tagImage} alt="Fragrance tag" />
+        <div className="tag placeholder">
+          This fragrance is not
+          <br />
+          designed to please
+          <br />
+          but to reflect.
+        </div>
 
-  <img className="tag-photo-img" src={tagPhoto} alt="Perfume lifestyle visual" />
-</section>
+        <div className="tag-photo placeholder">IMAGE</div>
+      </section>
 
       <section className="customize-section">
         <h2>CUSTOMIZE YOUR FRAGRANCE</h2>
 
         <div className="customize-grid">
-        <div className="package-preview">
-          <img src={packagePreview} alt="Customized perfume package preview" />
-        </div>
+          <div className="package-preview placeholder">IMAGE</div>
 
           <div className="package-customize-panel">
             <h3>Upload Image to Customize the Packaging</h3>
@@ -362,9 +361,7 @@ function Create() {
               Classical Packaging
             </div>
 
-            <div className="packaging-image">
-              <img src={classicalPackaging} alt="Classical packaging" />
-            </div>
+            <div className="packaging-image placeholder">IMAGE</div>
           </label>
 
           <label
@@ -382,9 +379,7 @@ function Create() {
               Customized Packaging
             </div>
 
-            <div className="packaging-image">
-              <img src={customizedPackaging} alt="Customized packaging" />
-            </div>
+            <div className="packaging-image placeholder">IMAGE</div>
           </label>
         </div>
 

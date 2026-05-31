@@ -457,7 +457,7 @@
   margin-bottom: 24px;
 
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 24px;
+  font-size: 27px;
   font-weight: 300;
   line-height: 1.15;
 }
@@ -511,7 +511,7 @@
 .memory-line-box textarea {
   width: 100%;
   height: 150px;
-  background: #3D3B3B;
+  background: #202020;
   color: #fffffa;
   border: none;
   padding: 22px;

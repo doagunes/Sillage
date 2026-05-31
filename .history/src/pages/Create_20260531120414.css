@@ -324,6 +324,7 @@
 /* CUSTOMIZE SECTION */
 
 .customize-section {
+  margin-top: 30px;  
   width: 1280px;
   margin: 0 auto 90px;
 }
@@ -425,9 +426,9 @@
 
 .packaging-choice-section {
   width: 1280px;
-  margin: 120px auto 110px;
+  margin: 0 auto 160px;
   display: grid;
-  grid-template-columns: 760px 430px;
+  grid-template-columns: 1fr 520px;
   gap: 90px;
   align-items: start;
 }
@@ -439,8 +440,7 @@
 }
 
 .packaging-card {
-  padding: 26px 24px 34px;
-  min-height: 520px;
+  padding: 26px;
   border-right: 1px solid #111;
   box-sizing: border-box;
   cursor: pointer;
@@ -450,98 +450,84 @@
   border-right: none;
 }
 
-.packaging-title {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 24px;
+.packaging-card.selected {
+  background: #f0eee8;
+}
 
+.packaging-title {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.15;
+  font-size: 28px;
+  margin-bottom: 22px;
 }
 
 .packaging-title input {
   width: 22px;
   height: 22px;
+  margin-right: 16px;
   accent-color: #111;
 }
 
 .packaging-image {
-  width: 100%;
-  height: 390px;
-  overflow: hidden;
+  height: 380px;
 }
-
-.packaging-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* RIGHT MEMORY LINE */
 
 .memory-line-panel {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .memory-line-box {
   border: 1px solid #111;
-  padding: 28px 26px 20px;
+  padding: 28px;
   box-sizing: border-box;
 }
 
 .memory-line-box h3 {
   margin: 0 0 34px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 31px;
-  font-weight: 300;
-  line-height: 1.12;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.08;
 }
 
 .memory-line-box p {
   margin: 0 0 26px;
-  font-size: 21px;
-  font-weight: 300;
-  line-height: 1.22;
+  font-size: 20px;
+  line-height: 1.25;
 }
 
 .memory-line-box textarea {
   width: 100%;
-  height: 150px;
-  background: #3D3B3B;
+  height: 180px;
+  background: #202020;
   color: #fffffa;
   border: none;
-  padding: 22px;
-  box-sizing: border-box;
   resize: none;
-  outline: none;
-
+  padding: 24px;
+  box-sizing: border-box;
   font-size: 20px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  outline: none;
+}
+
+.memory-line-box textarea::placeholder {
+  color: #d6d6d6;
 }
 
 .final-cart-btn {
-  width: 100%;
+  margin-top: 48px;
   height: 70px;
-  margin-top: 42px;
   border: 1px solid #111;
   background: transparent;
-
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 31px;
-  font-weight: 300;
+  font-size: 30px;
   text-align: left;
-  padding-left: 22px;
+  padding-left: 28px;
   cursor: pointer;
 }
 
-.final-cart-btn:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
-  pointer-events: none;
+.final-cart-btn:hover {
+  background: #111;
+  color: #fffffa;
 }
 
 /* PLACEHOLDER */

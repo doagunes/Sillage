@@ -382,9 +382,7 @@ function Create() {
               Customized Packaging
             </div>
 
-            <div className="packaging-image">
-              <img src={customizedPackaging} alt="Customized packaging" />
-            </div>
+            <div className="packaging-image placeholder">IMAGE</div>
           </label>
         </div>
 

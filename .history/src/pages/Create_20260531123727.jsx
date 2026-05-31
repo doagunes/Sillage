@@ -362,9 +362,7 @@ function Create() {
               Classical Packaging
             </div>
 
-            <div className="packaging-image">
-              <img src={classicalPackaging} alt="Classical packaging" />
-            </div>
+            <div className="packaging-image placeholder">IMAGE</div>
           </label>
 
           <label
@@ -382,9 +380,7 @@ function Create() {
               Customized Packaging
             </div>
 
-            <div className="packaging-image">
-              <img src={customizedPackaging} alt="Customized packaging" />
-            </div>
+            <div className="packaging-image placeholder">IMAGE</div>
           </label>
         </div>
 

@@ -440,7 +440,7 @@
 
 .packaging-card {
   padding: 26px 24px 34px;
-  min-height: 520px;
+  min-height: 5px;
   border-right: 1px solid #111;
   box-sizing: border-box;
   cursor: pointer;

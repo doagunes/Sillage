@@ -10,8 +10,6 @@ import createHeroImage from "../assets/create/create-hero.svg";
 import tagImage from "../assets/create/tag.svg";
 import tagPhoto from "../assets/create/tag-photo.svg";
 import packagePreview from "../assets/create/package-preview.svg";
-import classicalPackaging from "../assets/create/classical-packaging.svg";
-import customizedPackaging from "../assets/create/customized-packaging.svg";
 import "./Create.css";
 
 function Create() {
@@ -294,9 +292,7 @@ function Create() {
         <h2>CUSTOMIZE YOUR FRAGRANCE</h2>
 
         <div className="customize-grid">
-        <div className="package-preview">
-          <img src={packagePreview} alt="Customized perfume package preview" />
-        </div>
+          <div className="package-preview placeholder">IMAGE</div>
 
           <div className="package-customize-panel">
             <h3>Upload Image to Customize the Packaging</h3>
@@ -362,9 +358,7 @@ function Create() {
               Classical Packaging
             </div>
 
-            <div className="packaging-image">
-              <img src={classicalPackaging} alt="Classical packaging" />
-            </div>
+            <div className="packaging-image placeholder">IMAGE</div>
           </label>
 
           <label
@@ -382,9 +376,7 @@ function Create() {
               Customized Packaging
             </div>
 
-            <div className="packaging-image">
-              <img src={customizedPackaging} alt="Customized packaging" />
-            </div>
+            <div className="packaging-image placeholder">IMAGE</div>
           </label>
         </div>
 
