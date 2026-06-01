@@ -277,8 +277,6 @@
   font-family: Georgia, "Times New Roman", serif;
   font-size: 21px;
   cursor: pointer;
-  position: relative;
-  z-index: 21;
 }
 
 /* TAG */

@@ -10,7 +10,6 @@ import "./Archive.css";
 const API_URL = "http://localhost:5001/api";
 
 function Archive() {
-
   const location = useLocation();
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -233,7 +232,6 @@ navigate("/archive", { replace: true });
       )}
 
       <section className="archive-intro">
-        <h1>MEMORY ARCHIVE</h1>
         <p>
         Each fragrance in this archive begins with a real moment and what begins as a memory becomes something that lingers.
         In the archive, these moments exist beyond the individual, forming collective experiences each expressed through scent.

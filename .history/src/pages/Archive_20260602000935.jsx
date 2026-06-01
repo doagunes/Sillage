@@ -10,7 +10,6 @@ import "./Archive.css";
 const API_URL = "http://localhost:5001/api";
 
 function Archive() {
-
   const location = useLocation();
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -175,53 +174,53 @@ navigate("/archive", { replace: true });
 
               <div className="trace-upload-box">
                 {uploadedImage ? (
-                  <div className="popup-upload-success">
-                    <div className="popup-checkmark">✓</div>
-                    <p>File uploaded successfully</p>
+  <div className="popup-upload-success">
+    <div className="popup-checkmark">✓</div>
+    <p>File uploaded successfully</p>
 
-                    <label className="upload-plus-button">
-                      +
-                      <input
-                        type="file"
-                        accept="image/*"
-                        hidden
-                        onChange={(e) => {
-                          const file = e.target.files[0];
+    <label className="upload-plus-button">
+      +
+      <input
+        type="file"
+        accept="image/*"
+        hidden
+        onChange={(e) => {
+          const file = e.target.files[0];
 
-                          if (file) {
-                            setUploadedFile(file);
-                            setUploadedImage(URL.createObjectURL(file));
-                          }
-                        }}
-                      />
-                    </label>
-                  </div>
-                ) : (
-                  <>
-                    <div className="upload-cloud">☁</div>
-                    <p>
-                      Browse and choose the files you want to upload from your
-                      computer
-                    </p>
+          if (file) {
+            setUploadedFile(file);
+            setUploadedImage(URL.createObjectURL(file));
+          }
+        }}
+      />
+    </label>
+  </div>
+) : (
+  <>
+    <div className="upload-cloud">☁</div>
+    <p>
+      Browse and choose the files you want to upload from your
+      computer
+    </p>
 
-                    <label className="upload-plus-button">
-                      +
-                      <input
-                        type="file"
-                        accept="image/*"
-                        hidden
-                        onChange={(e) => {
-                          const file = e.target.files[0];
+    <label className="upload-plus-button">
+      +
+      <input
+        type="file"
+        accept="image/*"
+        hidden
+        onChange={(e) => {
+          const file = e.target.files[0];
 
-                          if (file) {
-                            setUploadedFile(file);
-                            setUploadedImage(URL.createObjectURL(file));
-                          }
-                        }}
-                      />
-                    </label>
-                  </>
-                )}
+          if (file) {
+            setUploadedFile(file);
+            setUploadedImage(URL.createObjectURL(file));
+          }
+        }}
+      />
+    </label>
+  </>
+)}
               </div>
 
               <button className="leave-trace-btn" onClick={handleLeaveTrace}>
@@ -233,7 +232,6 @@ navigate("/archive", { replace: true });
       )}
 
       <section className="archive-intro">
-        <h1>MEMORY ARCHIVE</h1>
         <p>
         Each fragrance in this archive begins with a real moment and what begins as a memory becomes something that lingers.
         In the archive, these moments exist beyond the individual, forming collective experiences each expressed through scent.

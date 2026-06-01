@@ -288,21 +288,21 @@ function Create() {
 
             <div className="package-upload-box">
               {packageImage ? (
-              <>
-                <div className="upload-icon">✓</div>
-                <p>File uploaded successfully</p>
-              </>
-            ) : (
-              <>
-                <div className="upload-icon">☁</div>
+  <>
+    <div className="upload-icon">✓</div>
+    <p>File uploaded successfully</p>
+  </>
+) : (
+  <>
+    <div className="upload-icon">☁</div>
 
-                <p>
-                  Browse and chose the files you want to
-                  <br />
-                  upload from your computer
-                </p>
-              </>
-            )}
+    <p>
+      Browse and chose the files you want to
+      <br />
+      upload from your computer
+    </p>
+  </>
+)}
 
               <label className="package-upload-plus">
                 +

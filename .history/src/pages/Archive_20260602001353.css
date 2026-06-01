@@ -8,12 +8,7 @@
   margin: 0 auto;
   padding: 40px 0 70px;
 }
-.archive-intro h1{
-  font-family: Georgia, "Times New Roman", serif;
-    font-size: 42px;
-    font-weight: 300;
-    margin-bottom: 10px;
-}
+
 .archive-intro p {
   width: 520px;
   font-size: 22px;
@@ -218,7 +213,7 @@
 
 .leave-trace-btn {
   height: 86px;
-  margin-bottom: 70px;
+  mar
   margin-top: auto;
   background: transparent;
   border: 1px solid #f7f7f3;

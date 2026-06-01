@@ -31,6 +31,7 @@ function Create() {
   const [packagingType, setPackagingType] = useState("");
   const [packageImage, setPackageImage] = useState(null);
   const [memoryLine, setMemoryLine] = useState("");
+  
 
   const [notes, setNotes] = useState({
     top: [],
@@ -38,20 +39,12 @@ function Create() {
     base: [],
   });
 
-  const canAddToCart =
-    isCreated &&
-    concentration &&
-    volume &&
-    packagingType &&
-    (packagingType !== "customized" || packageImage);
-
   const handleCreateFragrance = () => {
     if (!memoryTitle.trim()) return;
 
     const result = analyzeMemory(memoryText);
     setNotes(result);
     setIsCreated(true);
-    setCartError("");
   };
 
   const handleSaveToArchive = () => {
@@ -75,10 +68,33 @@ function Create() {
   };
 
   const handleAddToCart = () => {
-    if (!canAddToCart) return;
+    if (!isCreated) {
+      setCartError("Please create your fragrance first.");
+      return;
+    }
 
     if (!isLoggedIn) {
       setShowPopup(true);
+      return;
+    }
+
+    if (!concentration) {
+      setCartError("Please choose your preferred concentration.");
+      return;
+    }
+
+    if (!volume) {
+      setCartError("Please select the volume.");
+      return;
+    }
+
+    if (!packagingType) {
+      setCartError("Please choose a packaging type.");
+      return;
+    }
+
+    if (packagingType === "customized" && !packageImage) {
+      setCartError("Please upload an image for customized packaging.");
       return;
     }
 
@@ -102,7 +118,6 @@ function Create() {
 
     if (file) {
       setPackageImage(URL.createObjectURL(file));
-      setCartError("");
     }
   };
 
@@ -266,43 +281,45 @@ function Create() {
       </section>
 
       <section className="tag-section">
-        <div className="scroll-hint">
-          <span>Scroll down for</span>
-          <span>customize your packaging ↓</span>
-        </div>
+  <div className="scroll-hint">
+    <span>Scroll down for</span>
+    <span>customize your packaging ↓</span>
+  </div>
 
-        <img className="tag-img" src={tagImage} alt="Fragrance tag" />
-        <img className="tag-photo-img" src={tagPhoto} alt="Perfume lifestyle visual" />
-      </section>
+  <img className="tag-img" src={tagImage} alt="Fragrance tag" />
+
+  <img className="tag-photo-img" src={tagPhoto} alt="Perfume lifestyle visual" />
+</section>
 
       <section className="customize-section">
         <h2>CUSTOMIZE YOUR FRAGRANCE</h2>
 
         <div className="customize-grid">
-          <div className="package-preview">
-            <img src={packagePreview} alt="Customized perfume package preview" />
-          </div>
+        <div className="package-preview">
+          <img src={packagePreview} alt="Customized perfume package preview" />
+        </div>
 
           <div className="package-customize-panel">
             <h3>Upload Image to Customize the Packaging</h3>
 
             <div className="package-upload-box">
               {packageImage ? (
-              <>
-                <div className="upload-icon">✓</div>
-                <p>File uploaded successfully</p>
-              </>
-            ) : (
-              <>
-                <div className="upload-icon">☁</div>
+                <img
+                  src={packageImage}
+                  alt="Package preview"
+                  className="package-upload-preview"
+                />
+              ) : (
+                <>
+                  <div className="upload-icon">☁</div>
 
-                <p>
-                  Browse and chose the files you want to
-                  <br />
-                  upload from your computer
-                </p>
-              </>
-            )}
+                  <p>
+                    Browse and chose the files you want to
+                    <br />
+                    upload from your computer
+                  </p>
+                </>
+              )}
 
               <label className="package-upload-plus">
                 +
@@ -354,18 +371,14 @@ function Create() {
           <label
             className={`packaging-card ${
               packagingType === "customized" ? "selected" : ""
-            } ${!packageImage ? "disabled-packaging-card" : ""}`}
+            }`}
           >
             <div className="packaging-title">
               <input
                 type="radio"
                 name="packaging"
                 checked={packagingType === "customized"}
-                disabled={!packageImage}
-                onChange={() => {
-                  if (!packageImage) return;
-                  setPackagingType("customized");
-                }}
+                onChange={() => setPackagingType("customized")}
               />
               Customized Packaging
             </div>
@@ -398,9 +411,9 @@ function Create() {
           {cartError && <p className="cart-error-message">{cartError}</p>}
 
           <button
-            className="final-cart-btn"
+            className={`final-cart-btn ${!isCreated ? "disabled-cart-btn" : ""}`}
             onClick={handleAddToCart}
-            disabled={!canAddToCart}
+            disabled={!isCreated}
           >
             Add to Cart
           </button>
