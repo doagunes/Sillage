@@ -132,33 +132,54 @@ function LogoStrip() {
 
 function PopularScents() {
   const items = [
-    { name: "Salt Air", image: saltAir },
-    { name: "Apple Pie", image: applePie },
-    { name: "Morning Crust", image: morningCrust },
-    { name: "Midnight Balcony", image: midnightBalcony },
-  ];
+  {
+    name: "Salt Air",
+    image: saltAir,
+    slug: "salt-air",
+  },
+  {
+    name: "Apple Pie",
+    image: applePie,
+    slug: "apple-pie",
+  },
+  {
+    name: "Morning Crust",
+    image: morningCrust,
+    slug: "morning-crust",
+  },
+  {
+    name: "Midnight Balcony",
+    image: midnightBalcony,
+    slug: "midnight-balcony",
+  },
+];
 
   return (
     <section className="popular">
-      <h2>MONTHLY POPULAR SCENTS</h2>
+  <h2>MONTHLY POPULAR SCENTS</h2>
 
-      <div className="product-grid">
-        {items.map((item) => (
-          <div className="product-card" key={item.name}>
-            <div className="product-image">
-              <img src={item.image} alt={item.name} />
-            </div>
+  <div className="product-grid">
+    {items.map((item) => (
+      <div className="product-card" key={item.name}>
+        <div className="product-image">
+          <img src={item.image} alt={item.name} />
+        </div>
 
-            <div className="product-info">
-              <span>{item.name}</span>
-              <span>95 €</span>
-            </div>
+        <div className="product-info">
+          <span>{item.name}</span>
+          <span>95 €</span>
+        </div>
 
-            <button>BUY NOW</button>
-          </div>
-        ))}
+        <Link
+          to={`/scents/${item.slug}`}
+          className="buy-now-btn"
+        >
+          BUY NOW
+        </Link>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
   );
 }
 

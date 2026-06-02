@@ -13,6 +13,7 @@ import Create from "./pages/Create";
 import Archive from "./pages/Archive";
 import ArchiveDetail from "./pages/ArchiveDetail";
 import Cart from "./pages/Cart";
+import ScentDetail from "./pages/ScentDetail";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
             <Route path="/account" element={<Account />} />
 
             <Route path="/cart" element={<Cart />} />
+
+            <Route path="/scents/:scentId" element={<ScentDetail />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>
