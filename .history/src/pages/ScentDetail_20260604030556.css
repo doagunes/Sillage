@@ -1,0 +1,136 @@
+.scent-detail-page {
+  background: #fffffa;
+  color: #111;
+}
+
+.scent-detail-main {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 80px 0 70px;
+  position: relative;
+}
+
+.scent-back {
+  position: absolute;
+  top: 72px;
+  margin-left: 40px;
+  color:wh;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.scent-detail-top {
+  width: 100%;
+  display: block;
+}
+
+.scent-add-cart {
+  position: absolute;
+  right: 90px;
+  top: 750px;
+
+  width: 230px;
+  height: 48px;
+
+  border: 1px solid #111;
+  background: transparent;
+  color: #111;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.scent-add-cart:hover {
+  background: #111;
+  color: #fffffa;
+}
+
+.scent-quote-section {
+  width: 100%;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  overflow: hidden;
+}
+
+.scent-quote-section img {
+  width: 100%;
+  display: block;
+}
+
+.discover-section {
+  width: 100%;
+  padding: 70px 0 90px;
+}
+
+.discover-section h2 {
+  width: 1280px;
+  margin: 0 auto 70px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.discover-section > p {
+  width: 520px;
+  margin: 0 auto 70px;
+  margin-left: calc((100% - 1280px) / 2);
+
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.discover-scents-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 70px;
+}
+
+.discover-bottom {
+  width: 1280px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 260px;
+  align-items: center;
+}
+
+.memory-archive-btn {
+  width: 420px;
+  height: 72px;
+
+  border: 1px solid #111;
+  color: #111;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.memory-archive-btn:hover {
+  background: #111;
+  color: #fffffa;
+}
+
+.discover-bottom p {
+  width: 520px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.scent-not-found {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 120px 0;
+}

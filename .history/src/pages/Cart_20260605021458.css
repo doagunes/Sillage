@@ -1,0 +1,258 @@
+.cart-page {
+  background: #fffffa;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.cart-main {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 55px 0 130px;
+
+  display: grid;
+  grid-template-columns: 780px 360px;
+  column-gap: 70px;
+  align-items: start;
+}
+
+.cart-left {
+  position: relative;
+}
+
+.cart-back {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #111;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.cart-left h1 {
+  margin: 0 0 40px;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.cart-product-row {
+  display: grid;
+  grid-template-columns: 34px 220px 340px 110px;
+  column-gap: 26px;
+  align-items: start;
+  margin-bottom: 55px;
+}
+
+.cart-remove {
+  border: none;
+  background: transparent;
+  font-size: 34px;
+  font-weight: 200;
+  line-height: 1;
+  cursor: pointer;
+  color: #111;
+  padding: 0;
+  margin-top: 2px;
+}
+
+.cart-product-row .cart-preview {
+  width: 260px;
+  height: 260px;
+  transform: scale(0.80);
+  transform-origin: top left;
+}
+
+.cart-product-info {
+  padding: 0;
+  align-self: start;
+}
+
+.cart-product-info h2 {
+  margin: 0 0 12px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.15;
+  white-space: normal;
+}
+
+.cart-product-info strong {
+  display: block;
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  padding-top: 2px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.cart-quantity button {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #111;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  line-height: 1;
+}
+
+.cart-quantity span {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.coupon-area {
+  margin-top: 70px;
+  width: 620px;
+}
+
+.coupon-area p {
+  margin-bottom: 34px;
+  font-size: 16px;
+}
+
+.coupon-input-row {
+  display: grid;
+  grid-template-columns: 1fr 115px;
+  gap: 8px;
+}
+
+.coupon-input-row input {
+  border: none;
+  border-bottom: 1px solid #111;
+  background: transparent;
+  height: 42px;
+  font-size: 18px;
+  outline: none;
+}
+
+.coupon-input-row button,
+.new-perfume-btn {
+  border: 1px solid #111;
+  background: transparent;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+  cursor: pointer;
+}
+
+.coupon-input-row button {
+  height: 42px;
+  font-size: 15px;
+}
+
+.new-perfume-btn {
+  margin-top: 130px;
+  width: 300px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.cart-summary {
+  border-left: 1px solid #111;
+  padding-left: 34px;
+  min-height: 445px;
+}
+
+.cart-summary h2 {
+  margin: 0 0 18px;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.summary-line {
+  border-top: 1px solid #111;
+  padding-top: 14px;
+  margin-bottom: 14px;
+  font-size: 12px;
+}
+
+.summary-divider {
+  height: 1px;
+  background: #111;
+  margin: 40px 0 28px;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 55px;
+}
+
+.checkout-btn {
+  width: 220px;
+  height: 42px;
+  margin: 0 auto 70px;
+
+  display: block;
+  border: 1px solid #111;
+  background: transparent;
+
+  font-family: Georgia, "Times New Roman", serif;
+  cursor: pointer;
+}
+
+.secure-payment {
+  text-align: center;
+}
+
+.secure-payment h3 {
+  margin: 0 0 20px;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.secure-payment p {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  color: #777;
+}
+
+.payment-icons {
+  width: 230px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.payment-icons span {
+  height: 24px;
+  background: #f4f4f0;
+  border: 1px solid #ddd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: #333;
+}
+
+.empty-cart {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+}
