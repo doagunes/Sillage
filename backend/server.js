@@ -187,7 +187,7 @@ app.post("/api/memories", upload.single("memoryImage"), (req, res) => {
   }
 
   const memoryImage = req.file
-    ? `http://localhost:${PORT}/uploads/${req.file.filename}`
+    ? `/uploads/${req.file.filename}`
     : null;
 
   db.run(
