@@ -12,7 +12,7 @@ import darkPerfume from "../assets/perfumes/perfume-4.png";
 
 import "./ArchiveDetail.css";
 
-const API_URL = "http://localhost:5001/api";
+const API_URL = "/api";
 
 function ArchiveDetail() {
   const { id } = useParams();

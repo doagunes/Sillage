@@ -6,7 +6,7 @@ import { useAuth } from "../context/AuthContext";
 import DynamicPerfumeBottle from "../components/DynamicPerfumeBottle";
 import "./Account.css";
 
-const API_URL = "http://localhost:5001/api";
+const API_URL = "/api";
 
 function Account() {
   const navigate = useNavigate();

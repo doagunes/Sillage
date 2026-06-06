@@ -7,7 +7,7 @@ import { useAuth } from "../context/AuthContext";
 import DynamicPerfumeBottle from "../components/DynamicPerfumeBottle";
 import "./Archive.css";
 
-const API_URL = "http://localhost:5001/api";
+const API_URL = "/api";
 
 function Archive() {
             <h1>DEFINING SILLAGE</h1>

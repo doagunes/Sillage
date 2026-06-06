@@ -6,7 +6,7 @@ import { archiveItems } from "../data/archiveItems";
 import { useAuth } from "../context/AuthContext";
 import "./Archive.css";
 
-const API_URL = "http://localhost:5001/api";
+const API_URL = "/api";
 
 function Archive() {
   const location = useLocation();

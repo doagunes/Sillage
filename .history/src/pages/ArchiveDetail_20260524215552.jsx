@@ -8,7 +8,7 @@ import defaultPerfume from "../assets/perfumes/perfume-1.png";
 
 import "./ArchiveDetail.css";
 
-const API_URL = "http://localhost:5001/api";
+const API_URL = "/api";
 
 function ArchiveDetail() {
   const { id } = useParams();
