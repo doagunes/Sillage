@@ -1,0 +1,71 @@
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .signup-popup {
+    width: 740px;
+    min-height: 419px;
+    background: #222222;
+    color: #fffffa;
+    position: relative;
+    padding: 70px 80px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .popup-close {
+    position: absolute;
+    top: 28px;
+    right: 32px;
+    background: transparent;
+    border: none;
+    color: #fffffa;
+    font-size: 34px;
+    cursor: pointer;
+  }
+  
+  .signup-popup h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+  
+  .signup-popup p {
+    width: 470px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.35;
+    margin-bottom: 60px;
+  }
+  
+  .popup-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .popup-primary,
+  .popup-secondary {
+    width: 360px;
+    height: 54px;
+    border: 1px solid #fffffa;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .popup-primary {
+    background: #fffffa;
+    color: #222222;
+  }
+  
+  .popup-secondary {
+    background: transparent;
+    color: #fffffa;
+  }

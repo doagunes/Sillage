@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Richmond Display";
+  src: url("../assets/fonts/RichmondDisplay-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src: url("../assets/fonts/HelveticaNeue-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}

@@ -1,0 +1,247 @@
+.archive-page {
+  background: #fffffa;
+  color: #2E2D2D;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.archive-intro {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0 70px;
+}
+.archive-intro h1{
+  font-family: "Richmond Display", serif;
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.archive-intro p {
+  width: 520px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.archive-grid {
+  width: 1280px;
+  margin: 0 auto 120px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.archive-card {
+  display: block;
+  height: 300px;
+  perspective: 1000px;
+  text-decoration: none;
+}
+
+.archive-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.archive-card:hover .archive-card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: #202020;
+  object-fit: contain;
+  padding: 28px;
+}
+
+/* TRACE POPUP */
+
+.trace-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trace-popup {
+  width: 1290px;
+  height: 735px;
+  background: #3f3d3d;
+  color: #f7f7f3;
+  display: grid;
+  grid-template-columns: 370px 305px 385px;
+  gap: 38px;
+  padding: 28px 80px 55px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.trace-popup-close {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: #f7f7f3;
+  font-size: 34px;
+  cursor: pointer;
+}
+
+.trace-left,
+.trace-middle,
+.trace-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.trace-popup label {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.trace-popup input,
+.trace-popup textarea {
+  background: transparent;
+  border: 1px solid #f7f7f3;
+  color: #f7f7f3;
+  font-size: 18px;
+  padding: 12px;
+  outline: none;
+  margin-bottom: 24px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.trace-popup input {
+  height: 84px;
+}
+
+.trace-popup textarea {
+  height: 176px;
+  resize: none;
+}
+
+.trace-notes-box {
+  height: 376px;
+  border: 1px solid #f7f7f3;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.trace-notes-box p {
+  font-size: 22px;
+  border-bottom: 1px solid #f7f7f3;
+  display: inline-block;
+  margin: 0 0 8px;
+  font-weight: 300;
+}
+
+.trace-notes-box span {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 72px;
+  color: #ddd;
+}
+
+.trace-upload-box {
+  height: 443px;
+  background: #fffffa;
+  color: #202020;
+  border: 2px dashed #cfd4d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.upload-cloud {
+  font-size: 44px;
+  margin-bottom: 32px;
+}
+
+.trace-upload-box p {
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 1.22;
+  margin: 0 0 28px;
+}
+
+.upload-plus-button {
+  width: 70px;
+  height: 70px;
+  background: #202020;
+  color: #fffffa;
+  font-size: 42px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-upload-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.popup-checkmark {
+  font-size: 76px;
+  line-height: 1;
+  color: #111;
+}
+
+.popup-upload-success p {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 300;
+  color: #6f6f6f;
+}
+
+.leave-trace-btn {
+  height: 86px;
+  margin-bottom: 70px;
+  margin-top: auto;
+  background: transparent;
+  border: 1px solid #f7f7f3;
+  color: #f7f7f3;
+  font-size: 30px;
+  font-weight: 300;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.archive-card img {
+  filter: grayscale(100%);
+}
+.perfume-card-back {
+  background: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfume-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
