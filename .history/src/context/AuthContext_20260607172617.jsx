@@ -6,7 +6,6 @@ const API_URL = "/api";
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [authLoading, setAuthLoading] = useState(true);
 
   useEffect(() => {
     const savedCurrentUser = localStorage.getItem("sillageCurrentUser");
@@ -14,8 +13,6 @@ export function AuthProvider({ children }) {
     if (savedCurrentUser) {
       setUser(JSON.parse(savedCurrentUser));
     }
-
-    setAuthLoading(false);
   }, []);
 
   const signup = async ({ username, email, password }) => {
@@ -101,9 +98,7 @@ export function AuthProvider({ children }) {
   const isLoggedIn = Boolean(user);
 
   return (
-    <AuthContext.Provider
-      value={{ user, isLoggedIn, authLoading, signup, login, logout }}
-    >
+    <AuthContext.Provider value={{ user, isLoggedIn, signup, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

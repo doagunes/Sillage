@@ -38,9 +38,7 @@ function Account() {
     navigate("/signup");
   };
 
-  if (authLoading) {
-  return null;
-}
+  
   return (
     <div className="account-page page-enter">
       <div className="account-wrapper">

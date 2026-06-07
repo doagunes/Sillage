@@ -16,31 +16,26 @@ function Account() {
   const [myMemories, setMyMemories] = useState([]);
 
   useEffect(() => {
-  if (authLoading) return;
+    if (!user) {
+      navigate("/signup");
+      return;
+    }
 
-  if (!user) {
-    navigate("/signup");
-    return;
-  }
-
-  fetch(`${API_URL}/memories/user/${user.id}`)
-    .then((res) => res.json())
-    .then((data) => {
-      setMyMemories(data);
-    })
-    .catch((error) => {
-      console.error("Could not fetch user memories:", error);
-    });
-}, [user, authLoading, navigate]);
+    fetch(`${API_URL}/memories/user/${user.id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setMyMemories(data);
+      })
+      .catch((error) => {
+        console.error("Could not fetch user memories:", error);
+      });
+  }, [user, navigate]);
 
   const handleLogout = () => {
     logout();
     navigate("/signup");
   };
 
-  if (authLoading) {
-  return null;
-}
   return (
     <div className="account-page page-enter">
       <div className="account-wrapper">
