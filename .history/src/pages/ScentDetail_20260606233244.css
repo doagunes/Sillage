@@ -16,7 +16,7 @@
   z-index: 10;
   display: block;
 
-  width: 80px;
+  width: 70px;
   height: 50px;
 
   background: transparent;
@@ -25,22 +25,22 @@
 
 /* SVG içindeki okların yerine göre ayrı ayrı ayar */
 .scent-back-salt-air {
-  left: 50px;
+  left: 60px;
   top: 72px;
 }
 
 .scent-back-apple-pie {
-  left: 120px;
+  left: 145px;
   top: 72px;
 }
 
 .scent-back-morning-crust {
-  left: 100px;
+  left: 145px;
   top: 72px;
 }
 
 .scent-back-midnight-balcony {
-  left: 55px;
+  left: 92px;
   top: 72px;
 }
 

@@ -49,10 +49,10 @@ const toggleInfo = (section) => {
 
       <main className="scent-detail-main">
         <Link
-          to="/"
-          className={`scent-back-hotspot scent-back-${scentId}`}
-          aria-label="Back to home"
-        />
+  to="/"
+  className={`scent-back-hotspot scent-back-${scentId}`}
+  aria-label="Back to home"
+/>
 
         <img
           className="scent-detail-top"
