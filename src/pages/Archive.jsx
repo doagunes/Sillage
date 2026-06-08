@@ -5,18 +5,20 @@ import Footer from "../components/Footer";
 import { archiveItems } from "../data/archiveItems";
 import { useAuth } from "../context/AuthContext";
 import DynamicPerfumeBottle from "../components/DynamicPerfumeBottle";
+import thankYouPopup from "../assets/create/thank-you-popup.svg";
 import "./Archive.css";
 
 const API_URL = "/api";
 
 function Archive() {
-
   const location = useLocation();
   const { user } = useAuth();
   const navigate = useNavigate();
 
   const [databaseItems, setDatabaseItems] = useState([]);
   const [showTracePopup, setShowTracePopup] = useState(false);
+  const [showThankYouPopup, setShowThankYouPopup] = useState(false);
+
   const [draftMemory, setDraftMemory] = useState(null);
   const [uploadedImage, setUploadedImage] = useState(null);
   const [uploadedFile, setUploadedFile] = useState(null);
@@ -55,6 +57,7 @@ function Archive() {
       setDraftMemory(location.state.draftMemory);
       setUploadedImage(null);
       setUploadedFile(null);
+      setShowThankYouPopup(false);
 
       const timer = setTimeout(() => {
         setShowTracePopup(true);
@@ -63,6 +66,11 @@ function Archive() {
       return () => clearTimeout(timer);
     }
   }, [location.state]);
+
+  const handleThankYouClose = () => {
+    setShowThankYouPopup(false);
+    navigate("/archive", { replace: true });
+  };
 
   const handleLeaveTrace = async () => {
     if (!uploadedFile) {
@@ -119,8 +127,7 @@ function Archive() {
       setUploadedImage(null);
       setUploadedFile(null);
       setDraftMemory(null);
-
-navigate("/archive", { replace: true });
+      setShowThankYouPopup(true);
     } catch (error) {
       console.error(error);
       alert("Could not connect to the server.");
@@ -129,147 +136,167 @@ navigate("/archive", { replace: true });
 
   return (
     <div className="archive-page page-enter">
-        <div className="archive-page">
-      <Navbar />
+      <div className="archive-page">
+        <Navbar />
 
-      {showTracePopup && (
-        <div className="trace-popup-overlay">
-          <div className="trace-popup">
-            <button
-              className="trace-popup-close"
-              onClick={() => setShowTracePopup(false)}
-            >
-              ×
-            </button>
-
-            <div className="trace-left">
-              <label>Name</label>
-              <input placeholder="optional" />
-
-              <label>Surname</label>
-              <input placeholder="optional" />
-
-              <label>Title of Memory</label>
-              <input value={draftMemory?.title || ""} readOnly />
-
-              <label>Memory</label>
-              <textarea value={draftMemory?.memory || ""} readOnly />
-            </div>
-
-            <div className="trace-middle">
-              <label>Notes</label>
-
-              <div className="trace-notes-box">
-                <p>Top Notes</p>
-                <span>{draftMemory?.notes?.top?.join(", ")}</span>
-
-                <p>Heart Notes</p>
-                <span>{draftMemory?.notes?.heart?.join(", ")}</span>
-
-                <p>Base Notes</p>
-                <span>{draftMemory?.notes?.base?.join(", ")}</span>
-              </div>
-            </div>
-
-            <div className="trace-right">
-              <label>Photo of the Memory</label>
-
-              <div className="trace-upload-box">
-                {uploadedImage ? (
-                  <div className="popup-upload-success">
-                    <div className="popup-checkmark">✓</div>
-                    <p>File uploaded successfully</p>
-
-                    <label className="upload-plus-button">
-                      +
-                      <input
-                        type="file"
-                        accept="image/*"
-                        hidden
-                        onChange={(e) => {
-                          const file = e.target.files[0];
-
-                          if (file) {
-                            setUploadedFile(file);
-                            setUploadedImage(URL.createObjectURL(file));
-                          }
-                        }}
-                      />
-                    </label>
-                  </div>
-                ) : (
-                  <>
-                    <div className="upload-cloud">☁</div>
-                    <p>
-                      Browse and choose the files you want to upload from your
-                      computer
-                    </p>
-
-                    <label className="upload-plus-button">
-                      +
-                      <input
-                        type="file"
-                        accept="image/*"
-                        hidden
-                        onChange={(e) => {
-                          const file = e.target.files[0];
-
-                          if (file) {
-                            setUploadedFile(file);
-                            setUploadedImage(URL.createObjectURL(file));
-                          }
-                        }}
-                      />
-                    </label>
-                  </>
-                )}
-              </div>
-
-              <button className="leave-trace-btn" onClick={handleLeaveTrace}>
-                Leave your trace
+        {showTracePopup && (
+          <div className="trace-popup-overlay">
+            <div className="trace-popup">
+              <button
+                className="trace-popup-close"
+                onClick={() => setShowTracePopup(false)}
+              >
+                ×
               </button>
+
+              <div className="trace-left">
+                <label>Name</label>
+                <input placeholder="optional" />
+
+                <label>Surname</label>
+                <input placeholder="optional" />
+
+                <label>Title of Memory</label>
+                <input value={draftMemory?.title || ""} readOnly />
+
+                <label>Memory</label>
+                <textarea value={draftMemory?.memory || ""} readOnly />
+              </div>
+
+              <div className="trace-middle">
+                <label>Notes</label>
+
+                <div className="trace-notes-box">
+                  <p>Top Notes</p>
+                  <span>{draftMemory?.notes?.top?.join(", ")}</span>
+
+                  <p>Heart Notes</p>
+                  <span>{draftMemory?.notes?.heart?.join(", ")}</span>
+
+                  <p>Base Notes</p>
+                  <span>{draftMemory?.notes?.base?.join(", ")}</span>
+                </div>
+              </div>
+
+              <div className="trace-right">
+                <label>Photo of the Memory</label>
+
+                <div className="trace-upload-box">
+                  {uploadedImage ? (
+                    <div className="popup-upload-success">
+                      <div className="popup-checkmark">✓</div>
+                      <p>File uploaded successfully</p>
+
+                      <label className="upload-plus-button">
+                        +
+                        <input
+                          type="file"
+                          accept="image/*"
+                          hidden
+                          onChange={(e) => {
+                            const file = e.target.files[0];
+
+                            if (file) {
+                              setUploadedFile(file);
+                              setUploadedImage(URL.createObjectURL(file));
+                            }
+                          }}
+                        />
+                      </label>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="upload-cloud">☁</div>
+                      <p>
+                        Browse and choose the files you want to upload from your
+                        computer
+                      </p>
+
+                      <label className="upload-plus-button">
+                        +
+                        <input
+                          type="file"
+                          accept="image/*"
+                          hidden
+                          onChange={(e) => {
+                            const file = e.target.files[0];
+
+                            if (file) {
+                              setUploadedFile(file);
+                              setUploadedImage(URL.createObjectURL(file));
+                            }
+                          }}
+                        />
+                      </label>
+                    </>
+                  )}
+                </div>
+
+                <button className="leave-trace-btn" onClick={handleLeaveTrace}>
+                  Leave your trace
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <section className="archive-intro">
-        <h1>MEMORY ARCHIVE</h1>
-        <p>
-        Each fragrance in this archive begins with a real moment and what begins as a memory becomes something that lingers.
-        In the archive, these moments exist beyond the individual, forming collective experiences each expressed through scent.
-        You are invited not only to observe also to contribute.
-        </p>
-      </section>
+        {showThankYouPopup && (
+          <div className="thankyou-svg-overlay">
+            <div className="thankyou-svg-popup">
+              <img src={thankYouPopup} alt="Thank you message" />
 
-      <section className="archive-grid">
-        {items.map((item) => (
-          <Link to={`/archive/${item.id}`} className="archive-card" key={item.id}>
-            <div className="archive-card-inner">
-              <img
-                src={item.memoryImage}
-                alt={`Memory ${item.id}`}
-                className="card-front"
+              <button
+                className="thankyou-svg-close"
+                onClick={handleThankYouClose}
+                aria-label="Close thank you popup"
               />
-              <div className="card-back perfume-card-back">
-                {item.id.toString().startsWith("db-") ? (
-                  <DynamicPerfumeBottle title={item.draftMemory?.title} size="small" />
-                ) : (
-                  <img
-                    src={item.perfumeImage}
-                    alt={`Perfume ${item.id}`}
-                  />
-                )}
-              </div>
             </div>
-          </Link>
-        ))}
-      </section>
+          </div>
+        )}
 
-      <Footer />
+        <section className="archive-intro">
+          <h1>MEMORY ARCHIVE</h1>
+          <p>
+            Each fragrance in this archive begins with a real moment and what
+            begins as a memory becomes something that lingers. In the archive,
+            these moments exist beyond the individual, forming collective
+            experiences each expressed through scent. You are invited not only to
+            observe also to contribute.
+          </p>
+        </section>
+
+        <section className="archive-grid">
+          {items.map((item) => (
+            <Link
+              to={`/archive/${item.id}`}
+              className="archive-card"
+              key={item.id}
+            >
+              <div className="archive-card-inner">
+                <img
+                  src={item.memoryImage}
+                  alt={`Memory ${item.id}`}
+                  className="card-front"
+                />
+
+                <div className="card-back perfume-card-back">
+                  {item.id.toString().startsWith("db-") ? (
+                    <DynamicPerfumeBottle
+                      title={item.draftMemory?.title}
+                      size="small"
+                    />
+                  ) : (
+                    <img src={item.perfumeImage} alt={`Perfume ${item.id}`} />
+                  )}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </section>
+
+        <Footer />
+      </div>
     </div>
-    </div>
-    
   );
 }
 

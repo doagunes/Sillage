@@ -14,7 +14,7 @@
   .dynamic-perfume-label {
     position: absolute;
     left: 100px;
-    top: 60%;
+    top: 61%;
     width: 44%;
     text-align: left;
     color: #5a524d;
@@ -32,7 +32,7 @@
   }
   
   .dynamic-perfume.small .dynamic-perfume-label p {
-    font-size: 9px;
+    font-size: 7px;
   }
   
   .dynamic-perfume.large .dynamic-perfume-label p {
